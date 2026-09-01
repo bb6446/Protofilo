@@ -1,0 +1,2 @@
+# SPA routing fix for Netlify (redirect all paths to index.html with HTTP 200)
+/*    /index.html   200
