@@ -1,0 +1,1956 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary SEO Meta Tags -->
+  <title>MD BIPLOB | Professional Graphic Designer, Custom T-Shirt Artist & Apparel Specialist</title>
+  <meta name="title" content="MD BIPLOB | Professional Graphic Designer, Custom T-Shirt Artist & Apparel Specialist" />
+  <meta name="description"
+    content="Explore the official 3D interactive portfolio of MD Biplob (BIPLOB ART) — Professional Graphic Designer, Custom T-Shirt Artist, and POD Specialist. Expert in Streetwear, Vector Art, Typography, Tech Packs, Adobe Photoshop, and Illustrator." />
+  <meta name="keywords"
+    content="BIPLOB ART, MD Biplob, Graphic Designer, T-Shirt Designer, Custom Apparel, Streetwear T-Shirts, POD Designer, Vector Artist, Typography Design, Fabrilife Designer, Street ThreadX, Bangladesh Graphic Designer, Tech Pack Specialist, Adobe Illustrator, Adobe Photoshop, Behance biplob-art, LinkedIn biplob-art" />
+  <meta name="author" content="MD BIPLOB (BIPLOB ART)" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#00f3ff" />
+
+  <!-- Open Graph / Facebook / WhatsApp SEO -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.linkedin.com/in/biplob-art/" />
+  <meta property="og:title" content="MD BIPLOB (BIPLOB ART) | Professional Graphic Designer & Apparel Specialist" />
+  <meta property="og:description"
+    content="Turn creative ideas into wearable designs that sell. Explore cutting-edge streetwear, custom typography, vector graphics, and 3D design studio by MD Biplob." />
+  <meta property="og:image" content="./portfolio/street-threadx-collection.png" />
+  <meta property="og:site_name" content="MD Biplob 3D Portfolio // Behance & LinkedIn" />
+
+  <!-- Twitter Card SEO -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://www.linkedin.com/in/biplob-art/" />
+  <meta property="twitter:title" content="MD BIPLOB | Professional Graphic Designer & Apparel Specialist" />
+  <meta property="twitter:description"
+    content="Professional Custom T-Shirt Design, Streetwear Concepts, Vector Art & POD Solutions by MD Biplob." />
+  <meta property="twitter:image" content="./portfolio/street-threadx-collection.png" />
+
+  <!-- JSON-LD Structured Data Schema for Google Search -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["Person", "VisualArtist"],
+    "name": "MD BIPLOB",
+    "alternateName": "BIPLOB ART",
+    "jobTitle": "Professional Graphic Designer & Apparel Specialist",
+    "description": "Professional graphic designer specializing in custom T-shirt design, cutting-edge streetwear concepts, vector illustrations, typography, and print-ready merchandise.",
+    "url": "https://www.linkedin.com/in/biplob-art/",
+    "sameAs": [
+      "https://www.behance.net/biplob-art",
+      "https://www.linkedin.com/in/biplob-art/"
+    ],
+    "email": "talukderbiplob498@gmail.com",
+    "telephone": "+8801340276600",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Mymensingh",
+      "addressCountry": "Bangladesh"
+    },
+    "knowsAbout": [
+      "Graphic Design",
+      "Custom T-Shirt Design",
+      "Streetwear Apparel",
+      "Vector Design",
+      "Typography & Lettering",
+      "Print on Demand (POD)",
+      "Tech Packs & Specifications",
+      "Adobe Illustrator",
+      "Adobe Photoshop",
+      "Canva Pro"
+    ],
+    "worksFor": [
+      {
+        "@type": "Organization",
+        "name": "Fabrilife"
+      },
+      {
+        "@type": "Organization",
+        "name": "Street ThreadX"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts: Space Grotesk & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Space+Grotesk:wght@400;500;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./src/styles/main.css" />
+</head>
+
+<body>
+
+  <!-- Three.js 3D WebGL Canvas -->
+  <div id="webgl-container"></div>
+
+  <!-- Real-time Telemetry HUD (Fixed Bottom-Left) -->
+  <div class="telemetry-hud">
+    <div class="hud-row">
+      <span>DESIGNER:</span>
+      <span class="hud-val">MD BIPLOB</span>
+    </div>
+    <div class="hud-row">
+      <span>PROFILES:</span>
+      <span class="hud-val">
+        <a href="https://www.linkedin.com/in/biplob-art/" target="_blank"
+          style="color: #00f3ff; text-decoration: none;">LinkedIn</a> •
+        <a href="https://www.behance.net/biplob-art" target="_blank"
+          style="color: #00f3ff; text-decoration: none;">Behance</a>
+      </span>
+    </div>
+    <div class="hud-row">
+      <span>ENGINE:</span>
+      <span class="hud-val">WEBGL 3D & THREE.JS</span>
+    </div>
+    <div class="hud-row">
+      <span>FPS:</span>
+      <span class="hud-val" id="hud-fps">60 FPS</span>
+    </div>
+    <div class="hud-row">
+      <span>PARTICLES:</span>
+      <span class="hud-val" id="hud-particles">12000 PTS</span>
+    </div>
+  </div>
+
+  <!-- Theme Customizer Panel (Fixed Top-Right) -->
+  <div class="theme-panel" id="theme-panel">
+    <span class="control-label">COLOR PALETTE</span>
+    <div class="theme-palette-grid">
+      <button class="theme-btn active" data-theme-val="cyber-neon">
+        <span class="color-dot" style="background: #00f3ff; box-shadow: 0 0 8px #00f3ff;"></span>
+        <span>Cyber Neon</span>
+      </button>
+      <button class="theme-btn" data-theme-val="deep-space">
+        <span class="color-dot" style="background: #3b82f6; box-shadow: 0 0 8px #3b82f6;"></span>
+        <span>Deep Space</span>
+      </button>
+      <button class="theme-btn" data-theme-val="emerald-matrix">
+        <span class="color-dot" style="background: #00ff88; box-shadow: 0 0 8px #00ff88;"></span>
+        <span>Emerald</span>
+      </button>
+      <button class="theme-btn" data-theme-val="solar-flare">
+        <span class="color-dot" style="background: #ffaa00; box-shadow: 0 0 8px #ffaa00;"></span>
+        <span>Solar Flare</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Global Announcement Ticker / Banner (Admin Controlled) -->
+  <div class="announcement-bar" id="global-announcement-bar">
+    <span class="announcement-pulse"></span>
+    <span id="announcement-bar-text">🔥 NOW ACCEPTING NEW CUSTOM APPAREL & STREETWEAR COMMISSIONS FOR 2026 // FAST TURNAROUND</span>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="main-header">
+    <a href="#hero" class="brand-logo">
+      <div class="logo-icon">
+        <i data-lucide="palette" style="width: 18px; height: 18px; color: #000;"></i>
+      </div>
+      <span>MD <span class="neon-text">BIPLOB</span></span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#hero" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#studio" class="nav-link">3D Studio</a></li>
+      <li><a href="#expertise" class="nav-link">Expertise</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#projects" class="nav-link">Portfolio</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+      <li class="mobile-only-direct" style="width: 100%;">
+        <div class="mobile-direct-box">
+          <a href="https://wa.me/8801340276600?text=Hi%20Biplob,%20I'd%20like%20to%20discuss%20a%20design%20project!" 
+             target="_blank" 
+             class="cyber-btn whatsapp-btn" 
+             style="width: 100%; justify-content: center; padding: 0.75rem 1rem;">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.17-.48-.29z"/>
+            </svg>
+            <span>Message WhatsApp</span>
+          </a>
+          <a href="https://t.me/biplob_art" 
+             target="_blank" 
+             class="cyber-btn telegram-btn" 
+             style="width: 100%; justify-content: center; padding: 0.75rem 1rem;">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+            </svg>
+            <span>Message Telegram</span>
+          </a>
+        </div>
+      </li>
+    </ul>
+
+    <div class="header-actions">
+      <!-- Direct Messaging Channels (WhatsApp & Telegram) -->
+      <div class="header-direct-badge">
+        <!-- WhatsApp Direct -->
+        <a href="https://wa.me/8801340276600?text=Hi%20Biplob,%20I'd%20like%20to%20discuss%20a%20design%20project!" 
+           target="_blank" 
+           class="direct-msg-pill whatsapp"
+           title="Direct Message on WhatsApp (+8801340276600)">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor">
+            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.17-.48-.29z"/>
+          </svg>
+          <span class="direct-label">WhatsApp</span>
+        </a>
+
+        <!-- Telegram Direct -->
+        <a href="https://t.me/biplob_art" 
+           target="_blank" 
+           class="direct-msg-pill telegram"
+           title="Direct Message on Telegram (@biplob_art)">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+          </svg>
+          <span class="direct-label">Telegram</span>
+        </a>
+      </div>
+
+      <!-- LinkedIn Direct Link -->
+      <a href="https://www.linkedin.com/in/biplob-art/" target="_blank" class="icon-btn"
+        title="View LinkedIn Profile (biplob-art)">
+        <i data-lucide="linkedin" style="width: 16px; height: 16px; color: #0a66c2;"></i>
+      </a>
+
+      <!-- Behance Direct Link -->
+      <a href="https://www.behance.net/biplob-art" target="_blank" class="icon-btn"
+        title="View Behance Profile (biplob-art)">
+        <i data-lucide="globe" style="width: 16px; height: 16px;"></i>
+      </a>
+
+      <!-- Audio Toggle Button -->
+      <button class="icon-btn" id="audio-toggle-btn" title="Toggle Synthesized Audio FX">
+        <i data-lucide="volume-x"></i>
+      </button>
+
+      <!-- Theme Switcher Button -->
+      <button class="icon-btn" id="theme-toggle-btn" title="Theme Color Customizer">
+        <i data-lucide="sparkles"></i>
+      </button>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="icon-btn mobile-menu-toggle" id="mobile-menu-btn" title="Toggle Navigation Menu">
+        <i data-lucide="menu"></i>
+      </button>
+
+      <a href="https://wa.me/8801340276600?text=Hi%20Biplob,%20I'd%20like%20to%20discuss%20a%20design%20project!" target="_blank" class="cyber-btn hire-nav-btn"
+        style="padding: 0.55rem 1.2rem; font-size: 0.82rem;">
+        <i data-lucide="message-square" style="width: 14px; height: 14px;"></i>
+        <span>HIRE ME</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Foreground Content Wrapper -->
+  <div class="content-wrapper">
+
+    <!-- 1. Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span class="pulse-dot"></span>
+              <span>VERIFIED BEHANCE & LINKEDIN DESIGNER // BIPLOB ART</span>
+            </div>
+
+            <h1 class="hero-title">
+              MD <span class="gradient-text">BIPLOB</span>
+            </h1>
+
+            <p class="hero-role">Custom T-Shirt Artist // Vector Designer // POD Specialist</p>
+
+            <p class="hero-subtitle">
+              Specializing in custom T-shirt design — from cutting-edge streetwear concepts to simple, minimalist
+              aesthetics. With years of real-world experience at <strong>Fabrilife</strong> and <strong>Street
+                ThreadX</strong>, I turn creative ideas into wearable designs that stand out and sell.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="cyber-btn">
+                <span>EXPLORE PORTFOLIO</span>
+                <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/biplob-art/" target="_blank" class="cyber-btn linkedin-btn">
+                <i data-lucide="linkedin" style="width: 16px; height: 16px;"></i>
+                <span>LINKEDIN</span>
+              </a>
+              <a href="https://www.behance.net/biplob-art" target="_blank" class="cyber-btn behance-btn">
+                <i data-lucide="external-link" style="width: 16px; height: 16px;"></i>
+                <span>BEHANCE</span>
+              </a>
+              <a href="mailto:talukderbiplob498@gmail.com" class="cyber-btn secondary">
+                <i data-lucide="mail" style="width: 16px; height: 16px;"></i>
+                <span>EMAIL ME</span>
+              </a>
+            </div>
+
+            <div class="hero-stats">
+              <div class="stat-item">
+                <h3>4+</h3>
+                <p>Years Experience</p>
+              </div>
+              <div class="stat-item">
+                <h3>500+</h3>
+                <p>Print-Ready Designs</p>
+              </div>
+              <div class="stat-item">
+                <h3>400+</h3>
+                <p>Behance Views</p>
+              </div>
+              <div class="stat-item">
+                <h3>100%</h3>
+                <p>Client Focus</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. About Me & Personal Background -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="section-header reveal-card">
+          <span class="section-tag">Identity & Background</span>
+          <h2 class="section-title">ABOUT <span class="neon-text">MD BIPLOB</span></h2>
+          <p class="section-desc">
+            Passionate apparel artist with an engineering mindset, dedicated to precision, creative storytelling, and
+            friendly, respectful collaboration.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Biography Card -->
+          <div class="glass-card reveal-card">
+            <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">
+              <i data-lucide="user"
+                style="vertical-align: middle; color: var(--accent-primary); margin-right: 8px;"></i>
+              Profile Statement
+            </h3>
+            <p style="color: var(--text-muted); line-height: 1.7; font-size: 1rem; margin-bottom: 1.2rem;">
+              The only child of a middle-class family. I did engineering with a lot of hope and desire and am ready to
+              do any work anytime. It is my nature to follow the rules and deliver excellence. I like to interact with
+              everyone in a friendly, respectful, and professional manner.
+            </p>
+            <p style="color: var(--text-muted); line-height: 1.7; font-size: 1rem;">
+              My specialties include: Fashionable & original T-shirt graphics, typography, illustration, merchandise
+              branding, and print-ready artwork for brands, retailers, and influencers. All of my design is clean,
+              modern, and intended to connect with real people.
+            </p>
+
+            <h4
+              style="font-size: 1.1rem; font-weight: 700; margin-top: 1.8rem; margin-bottom: 0.8rem; color: var(--accent-primary);">
+              <i data-lucide="globe" style="vertical-align: middle; margin-right: 6px;"></i> Languages
+            </h4>
+            <div class="badges-container">
+              <span class="skill-badge highlight">🇧🇩 Bangla (Native)</span>
+              <span class="skill-badge highlight">🇬🇧 English (Professional)</span>
+              <span class="skill-badge highlight">🇮🇳 Hindi (Conversational)</span>
+            </div>
+          </div>
+
+          <!-- Personal Information Card -->
+          <div class="glass-card reveal-card">
+            <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">
+              <i data-lucide="file-text"
+                style="vertical-align: middle; color: var(--accent-secondary); margin-right: 8px;"></i>
+              Personal & Professional Profiles
+            </h3>
+
+            <table class="info-table">
+              <tr>
+                <td class="info-label">Full Name:</td>
+                <td class="info-value">MD BIPLOB</td>
+              </tr>
+              <tr>
+                <td class="info-label">Brand / Alias:</td>
+                <td class="info-value"><span class="neon-text" style="font-weight: 700;">BIPLOB ART</span></td>
+              </tr>
+              <tr>
+                <td class="info-label">Specialization:</td>
+                <td class="info-value">Custom T-Shirt & Streetwear Apparel Artist</td>
+              </tr>
+              <tr>
+                <td class="info-label">Email:</td>
+                <td class="info-value"><a href="mailto:talukderbiplob498@gmail.com"
+                    style="color: #00f3ff; text-decoration: none;">talukderbiplob498@gmail.com</a></td>
+              </tr>
+              <tr>
+                <td class="info-label">WhatsApp / Phone:</td>
+                <td class="info-value"><a href="https://wa.me/8801340276600" target="_blank"
+                    style="color: #00f3ff; text-decoration: none;">+8801340276600</a></td>
+              </tr>
+              <tr>
+                <td class="info-label">LinkedIn:</td>
+                <td class="info-value"><a href="https://www.linkedin.com/in/biplob-art/" target="_blank"
+                    style="color: #00f3ff; text-decoration: underline;">linkedin.com/in/biplob-art</a></td>
+              </tr>
+              <tr>
+                <td class="info-label">Behance:</td>
+                <td class="info-value"><a href="https://www.behance.net/biplob-art" target="_blank"
+                    style="color: #00f3ff; text-decoration: underline;">behance.net/biplob-art</a></td>
+              </tr>
+              <tr>
+                <td class="info-label">Location:</td>
+                <td class="info-value">Mymensingh, Bangladesh</td>
+              </tr>
+              <tr>
+                <td class="info-label">Availability:</td>
+                <td class="info-value"><span style="color: #00ff88; font-weight: 600;">Open for Freelance &
+                    Full-time</span></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. 3D Interactive Design Studio (Sandbox) -->
+    <section class="sandbox-section" id="studio">
+      <div class="container">
+        <div class="section-header reveal-card">
+          <span class="section-tag">Interactive 3D Studio & Simulation</span>
+          <h2 class="section-title">CREATIVE <span class="neon-text">3D DESIGN LAB</span></h2>
+          <p class="section-desc">
+            Interact in real time with 3D apparel mockups, cyber geometries, and vector prints. Map artwork textures
+            directly onto 3D garments, switch material shaders, rotate dynamically, or deconstruct the mesh.
+          </p>
+        </div>
+
+        <div class="sandbox-container">
+          <!-- 3D Interactive Viewport framing -->
+          <div class="sandbox-viewport-frame reveal-card">
+            <div class="sandbox-overlay-hint">
+              <i data-lucide="hand" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"></i>
+              Click & Drag to rotate • Move mouse for parallax depth
+            </div>
+          </div>
+
+          <!-- Controls Panel -->
+          <div class="sandbox-panel reveal-card">
+            <!-- Geometry Shape Switcher -->
+            <div class="control-group">
+              <span class="control-label">3D Geometry Model</span>
+              <div class="shape-btn-grid">
+                <button class="pill-btn active" data-shape="tshirt">Streetwear Tee</button>
+                <button class="pill-btn" data-shape="torus">Cyber Torus</button>
+                <button class="pill-btn" data-shape="diamond">Diamond Gem</button>
+                <button class="pill-btn" data-shape="badge">Shield Badge</button>
+                <button class="pill-btn" data-shape="helix">DNA Yarn Helix</button>
+                <button class="pill-btn" data-shape="quantum">Quantum Lattice</button>
+              </div>
+            </div>
+
+            <!-- Artwork Decal / Texture Mapping Mode -->
+            <div class="control-group">
+              <span class="control-label">Artwork Print / Texture Decal</span>
+              <div class="shape-btn-grid">
+                <button class="pill-btn active" data-tex="street">Street ThreadX</button>
+                <button class="pill-btn" data-tex="goals">Focus Goals</button>
+                <button class="pill-btn" data-tex="future">Never Give Up</button>
+                <button class="pill-btn" data-tex="clean">Clean Cyber</button>
+              </div>
+            </div>
+
+            <!-- Material / Shader Mode -->
+            <div class="control-group">
+              <span class="control-label">Apparel Shader / Finish</span>
+              <div class="shape-btn-grid">
+                <button class="pill-btn active" data-mat="hologram">Hologram</button>
+                <button class="pill-btn" data-mat="glass">Clear Glass</button>
+                <button class="pill-btn" data-mat="chrome">Metallic Foil</button>
+                <button class="pill-btn" data-mat="wireframe">Vector Wire</button>
+              </div>
+            </div>
+
+            <!-- Deconstruct / Explode Toggle -->
+            <div class="control-group">
+              <button class="cyber-btn secondary" id="explode-btn"
+                style="width: 100%; justify-content: center; padding: 0.65rem 1rem; font-size: 0.8rem;">
+                <i data-lucide="maximize-2" style="width: 14px; height: 14px;"></i>
+                <span>Deconstruct / Explode 3D Mesh</span>
+              </button>
+            </div>
+
+            <!-- Rotation Speed Slider -->
+            <div class="control-group">
+              <div style="display: flex; justify-content: space-between;">
+                <span class="control-label">Spin Velocity</span>
+              </div>
+              <input type="range" class="range-slider" id="speed-slider" min="0" max="3" step="0.1" value="1.0" />
+            </div>
+
+            <!-- Particle Density Slider -->
+            <div class="control-group">
+              <div style="display: flex; justify-content: space-between;">
+                <span class="control-label">Particle Density</span>
+              </div>
+              <input type="range" class="range-slider" id="particle-slider" min="3000" max="25000" step="1000"
+                value="12000" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Expertise & Skills Section -->
+    <section class="expertise-section" id="expertise">
+      <div class="container">
+        <div class="section-header reveal-card">
+          <span class="section-tag">Core Competencies</span>
+          <h2 class="section-title">SKILLS & <span class="gradient-text">EXPERTISE</span></h2>
+          <p class="section-desc">
+            A potent combination of graphic design mastery, apparel tech pack engineering, and computer science
+            background.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Graphic & Apparel Design Suite -->
+          <div class="glass-card reveal-card">
+            <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 0.8rem;">
+              <i data-lucide="layers"
+                style="vertical-align: middle; color: var(--accent-primary); margin-right: 8px;"></i>
+              Design & Apparel Expertise
+            </h3>
+            <div class="badges-container">
+              <span class="skill-badge highlight"><i data-lucide="check" style="width: 14px; height: 14px;"></i> Graphic
+                Design</span>
+              <span class="skill-badge highlight"><i data-lucide="check" style="width: 14px; height: 14px;"></i> Adobe
+                Photoshop</span>
+              <span class="skill-badge highlight"><i data-lucide="check" style="width: 14px; height: 14px;"></i> Adobe
+                Illustrator</span>
+              <span class="skill-badge highlight"><i data-lucide="check" style="width: 14px; height: 14px;"></i> Vector
+                Designer</span>
+              <span class="skill-badge highlight"><i data-lucide="check" style="width: 14px; height: 14px;"></i>
+                Typography & Lettering</span>
+              <span class="skill-badge highlight"><i data-lucide="check" style="width: 14px; height: 14px;"></i> Apparel
+                Design</span>
+              <span class="skill-badge highlight"><i data-lucide="check" style="width: 14px; height: 14px;"></i> Print
+                On Demand (POD)</span>
+              <span class="skill-badge"><i data-lucide="check" style="width: 14px; height: 14px;"></i> Canva Pro</span>
+              <span class="skill-badge"><i data-lucide="check" style="width: 14px; height: 14px;"></i> AI Creative
+                Tools</span>
+              <span class="skill-badge"><i data-lucide="check" style="width: 14px; height: 14px;"></i> POD
+                Designer</span>
+            </div>
+
+            <!-- Programming Languages -->
+            <h3 style="font-size: 1.4rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.8rem;">
+              <i data-lucide="code"
+                style="vertical-align: middle; color: var(--accent-secondary); margin-right: 8px;"></i>
+              Programming & Tech Stack
+            </h3>
+            <div class="badges-container">
+              <span class="skill-badge">HTML</span>
+              <span class="skill-badge">CSS</span>
+              <span class="skill-badge">JavaScript</span>
+              <span class="skill-badge">JAVA</span>
+              <span class="skill-badge">PYTHON</span>
+              <span class="skill-badge">SQL</span>
+            </div>
+          </div>
+
+          <!-- Skills Summary Performance Bars -->
+          <div class="glass-card reveal-card">
+            <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 1.2rem;">
+              <i data-lucide="bar-chart-2"
+                style="vertical-align: middle; color: var(--accent-primary); margin-right: 8px;"></i>
+              Skills Summary Metrics
+            </h3>
+
+            <div class="skills-progress-list">
+              <div>
+                <div class="skill-bar-header">
+                  <span>Project Management</span>
+                  <span class="hud-val">81%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" style="width: 81%;"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="skill-bar-header">
+                  <span>Design Process & Artistry</span>
+                  <span class="hud-val">78%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" style="width: 78%;"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="skill-bar-header">
+                  <span>Problem Solving & Technical Design</span>
+                  <span class="hud-val">75%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" style="width: 75%;"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="skill-bar-header">
+                  <span>Print-Ready Vector Precision</span>
+                  <span class="hud-val">95%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" style="width: 95%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Experience / Career Journey -->
+    <section class="experience-section" id="experience">
+      <div class="container">
+        <div class="section-header reveal-card">
+          <span class="section-tag">Work Experience</span>
+          <h2 class="section-title">CAREER & <span class="neon-text">EXPERIENCE</span></h2>
+          <p class="section-desc">
+            Professional track record delivering commercially appealing and high-performing apparel art for
+            industry-leading fashion brands.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <!-- Dynamic Certifications & Training Programs (Admin Synced) -->
+          <div id="public-certifications-container"></div>
+
+          <!-- Fabrilife Experience -->
+          <div class="timeline-item reveal-card">
+            <div class="timeline-node">
+              <i data-lucide="shirt" style="width: 20px; height: 20px;"></i>
+            </div>
+            <div class="timeline-content">
+              <div
+                style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.8rem;">
+                <h3 class="company-title">
+                  FABRILIFE
+                  <span class="role-badge">GRAPHICS DESIGN</span>
+                </h3>
+                <span class="mono" style="color: var(--accent-primary); font-size: 0.85rem;">CUSTOM T-SHIRT
+                  ARTIST</span>
+              </div>
+              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
+                As a Custom T-Shirt Artist, I bring creative ideas to life through wearable design. My role involves
+                understanding trends and telling stories through art, resulting in compelling, print-ready designs. Each
+                shirt I create is crafted with passion and respect for the art.
+              </p>
+              <ul class="timeline-list">
+                <li>Design original T-shirt artwork aligned with brand style and client vision.</li>
+                <li>Create bold illustrations and typography for various streetwear and lifestyle styles.</li>
+                <li>Prepare high-quality, print-ready files optimized for direct-to-garment (DTG), screen printing, and
+                  heat transfer.</li>
+                <li>Collaborate closely with clients and design teams to capture their core message in art.</li>
+                <li>Stay updated on global fashion and pop culture trends to create relevant, high-converting artwork.
+                </li>
+                <li>Deliver creative, highly aesthetic, and commercially appealing designs consistently on schedule.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Street ThreadX Experience -->
+          <div class="timeline-item reveal-card">
+            <div class="timeline-node">
+              <i data-lucide="scissors" style="width: 20px; height: 20px;"></i>
+            </div>
+            <div class="timeline-content">
+              <div
+                style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.8rem;">
+                <h3 class="company-title">
+                  STREET THREADX
+                  <span class="role-badge"
+                    style="border-color: var(--accent-secondary); color: var(--accent-secondary); background: rgba(255, 0, 127, 0.1);">APPAREL
+                    DESIGN</span>
+                </h3>
+                <span class="mono" style="color: var(--accent-secondary); font-size: 0.85rem;">TECHNICAL APPAREL
+                  ARTIST</span>
+              </div>
+              <ul class="timeline-list">
+                <li><strong>Concept Development:</strong> Research seasonal trends, colors, and fabrics to create mood
+                  boards and initial design sketches.</li>
+                <li><strong>Technical Design:</strong> Create detailed Tech Packs, including flat sketches, points of
+                  measure, and construction details.</li>
+                <li><strong>Fabric & Trim Sourcing:</strong> Select appropriate materials that meet both aesthetic goals
+                  and price point targets.</li>
+                <li><strong>Prototyping:</strong> Oversee the sampling process, conducting fit sessions and providing
+                  clear comments to manufacturers for revisions.</li>
+                <li><strong>Collaboration:</strong> Work closely with Merchandising and Production teams to ensure
+                  designs are commercially viable and delivered on schedule.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Education Background -->
+    <section class="education-section" id="education">
+      <div class="container">
+        <div class="section-header reveal-card">
+          <span class="section-tag">Academic Background</span>
+          <h2 class="section-title">EDUCATION & <span class="gradient-text">QUALIFICATIONS</span></h2>
+          <p class="section-desc">
+            Formal technical education combining Computer Science and Engineering principles with creative design.
+          </p>
+        </div>
+
+        <div class="education-grid">
+          <!-- B.Sc in CSE -->
+          <div class="education-card reveal-card">
+            <div class="edu-icon">
+              <i data-lucide="graduation-cap"></i>
+            </div>
+            <span class="edu-result-badge"
+              style="background: rgba(0, 243, 255, 0.15); border-color: var(--accent-primary); color: var(--accent-primary);">
+              RUNNING
+            </span>
+            <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.4rem;">UTTARA UNIVERSITY</h3>
+            <p class="mono" style="color: var(--accent-primary); font-size: 0.85rem; margin-bottom: 0.6rem;">Uttara
+              Model Town, Dhaka</p>
+            <p style="font-weight: 600; font-size: 1.05rem; color: var(--text-main); margin-bottom: 0.8rem;">B.Sc in CSE
+            </p>
+            <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">
+              Undergraduate program in Computer Science & Engineering, developing deep problem-solving skills,
+              algorithms, and computational logic.
+            </p>
+          </div>
+
+          <!-- Diploma in Engineering -->
+          <div class="education-card reveal-card">
+            <div class="edu-icon">
+              <i data-lucide="award"></i>
+            </div>
+            <span class="edu-result-badge">CGPA: 3.53</span>
+            <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.4rem;">MUNSHIGANJ POLYTECHNIC INSTITUTE
+            </h3>
+            <p class="mono" style="color: var(--accent-primary); font-size: 0.85rem; margin-bottom: 0.6rem;">Mirkadim,
+              Munshiganj</p>
+            <p style="font-weight: 600; font-size: 1.05rem; color: var(--text-main); margin-bottom: 0.8rem;">Diploma in
+              Engineering</p>
+            <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">
+              Computer Science and Technology • Session 2019/20 • Result: <strong>3.53</strong>. Comprehensive software
+              engineering, database, and system fundamentals.
+            </p>
+          </div>
+
+          <!-- SSC -->
+          <div class="education-card reveal-card">
+            <div class="edu-icon">
+              <i data-lucide="book-open"></i>
+            </div>
+            <span class="edu-result-badge">GPA: 4.33</span>
+            <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.4rem;">HAZI COTO-KALIM HIGH SCHOOL</h3>
+            <p class="mono" style="color: var(--accent-primary); font-size: 0.85rem; margin-bottom: 0.6rem;">Sreepur,
+              Gazipur, Dhaka</p>
+            <p style="font-weight: 600; font-size: 1.05rem; color: var(--text-main); margin-bottom: 0.8rem;">Secondary
+              School Certificate (SSC)</p>
+            <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">
+              Subject: Science • Result: <strong>4.33</strong> • Passing Year: 2019. Strong foundation in mathematics,
+              physics, and scientific thinking.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Portfolio Showcase (Featured Designs) -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+        <div class="section-header reveal-card">
+          <span class="section-tag">Portfolio & Showcase</span>
+          <h2 class="section-title">FEATURED <span class="neon-text">DESIGN PROJECTS</span></h2>
+          <p class="section-desc">
+            All original apparel artworks, custom streetwear collections, dynamic typography graphics, and commercial
+            POD designs from Behance (<a href="https://www.behance.net/biplob-art" target="_blank"
+              style="color: var(--accent-primary); text-decoration: underline;">behance.net/biplob-art</a>) and LinkedIn
+            (<a href="https://www.linkedin.com/in/biplob-art/" target="_blank"
+              style="color: var(--accent-primary); text-decoration: underline;">linkedin.com/in/biplob-art</a>).
+          </p>
+        </div>
+
+        <!-- Professional Profiles Banner -->
+        <div class="behance-profile-banner reveal-card">
+          <div>
+            <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.4rem;">
+              <span class="pulse-dot"></span>
+              <h3 style="font-size: 1.3rem; font-weight: 800; color: #fff;">MD BIPLOB // BIPLOB ART</h3>
+              <span class="skill-badge highlight" style="font-size: 0.72rem; padding: 0.2rem 0.5rem;">VERIFIED
+                PROFILES</span>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.88rem;">Professional Graphic & Apparel Designer •
+              Mymensingh, Bangladesh</p>
+          </div>
+
+          <div class="behance-stats-row">
+            <div class="behance-stat-unit">
+              <span class="behance-stat-num">416+</span>
+              <span class="behance-stat-label">Project Views</span>
+            </div>
+            <div class="behance-stat-unit">
+              <span class="behance-stat-num">52+</span>
+              <span class="behance-stat-label">Appreciations</span>
+            </div>
+            <a href="https://www.linkedin.com/in/biplob-art/" target="_blank" class="cyber-btn linkedin-btn"
+              style="padding: 0.6rem 1.2rem; font-size: 0.8rem;">
+              <i data-lucide="linkedin" style="width: 14px; height: 14px;"></i>
+              <span>LINKEDIN</span>
+            </a>
+            <a href="https://www.behance.net/biplob-art" target="_blank" class="cyber-btn behance-btn"
+              style="padding: 0.6rem 1.2rem; font-size: 0.8rem;">
+              <i data-lucide="external-link" style="width: 14px; height: 14px;"></i>
+              <span>BEHANCE</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="portfolio-filter-tabs reveal-card">
+          <button class="filter-tab-btn active" data-filter="all">All Designs (10)</button>
+          <button class="filter-tab-btn" data-filter="streetwear">Streetwear Drops</button>
+          <button class="filter-tab-btn" data-filter="typography">Typography Art</button>
+          <button class="filter-tab-btn" data-filter="illustration">Vector Illustration</button>
+          <button class="filter-tab-btn" data-filter="pod">POD & Techwear</button>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Design 1: Street ThreadX Collection -->
+          <div class="project-card reveal-card" data-project-id="p1" data-category="streetwear pod">
+            <div class="project-thumb-img-wrapper">
+              <img src="./portfolio/street-threadx-collection.png"
+                alt="Street ThreadX Cyber Streetwear Collection by MD Biplob" class="project-img" loading="lazy" />
+              <span class="project-overlay-badge">STREET THREADX</span>
+              <div class="project-zoom-indicator">
+                <i data-lucide="maximize-2" style="width: 18px; height: 18px;"></i>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category">Streetwear Campaign</span>
+              <h3 class="project-title">Street ThreadX — Urban Streetwear Lineup</h3>
+              <p class="project-desc">
+                High-impact oversized streetwear t-shirt collection featuring modern cyber typography ("FOCUS ON THE
+                GOALS", "UNSTOPPABLE", "explore", "STRONGER", "NEXT LEVEL") engineered for Street ThreadX.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Streetwear</span>
+                <span class="project-tag">Oversized Fit</span>
+                <span class="project-tag">Screen Print</span>
+                <span class="project-tag">Adobe Illustrator</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Design 2: Never Give Up Typography -->
+          <div class="project-card reveal-card" data-project-id="p2" data-category="typography pod">
+            <div class="project-thumb-img-wrapper">
+              <img src="./portfolio/never-give-up-typography.png"
+                alt="Never Give Up Vector Typography T-Shirt Design by MD Biplob" class="project-img" loading="lazy" />
+              <span class="project-overlay-badge">TYPOGRAPHY ART</span>
+              <div class="project-zoom-indicator">
+                <i data-lucide="maximize-2" style="width: 18px; height: 18px;"></i>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category">Custom Lettering & Vector</span>
+              <h3 class="project-title">"Never Give Up — Created Your Own Future" Tee</h3>
+              <p class="project-desc">
+                Multi-layered geometric typography artwork with custom diagonal hatching, dual-tone orange/red gradient
+                accents, and print-ready vector separations.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Typography</span>
+                <span class="project-tag">Vector Art</span>
+                <span class="project-tag">DTG Ready</span>
+                <span class="project-tag">Color Separation</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Design 3: Peace Hand Splatter -->
+          <div class="project-card reveal-card" data-project-id="p3" data-category="illustration pod">
+            <div class="project-thumb-img-wrapper">
+              <img src="./portfolio/peace-hand-vector-splatter.png"
+                alt="Vibrant Splatter Peace Hand Illustration by MD Biplob" class="project-img" loading="lazy" />
+              <span class="project-overlay-badge">VECTOR ILLUSTRATION</span>
+              <div class="project-zoom-indicator">
+                <i data-lucide="maximize-2" style="width: 18px; height: 18px;"></i>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category">Pop Art & Colorburst</span>
+              <h3 class="project-title">Splatter Peace Hand — Colorburst Apparel Art</h3>
+              <p class="project-desc">
+                Dynamic multi-color victory hand illustration with explosive paint splatter effects, designed for
+                high-resolution Direct-to-Garment (DTG) print on demand apparel.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Pop Art</span>
+                <span class="project-tag">Paint Splatter</span>
+                <span class="project-tag">High-Res DTG</span>
+                <span class="project-tag">Photoshop</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Design 4: Focus On The Goals -->
+          <div class="project-card reveal-card" data-project-id="p4" data-category="streetwear typography">
+            <div class="project-thumb-img-wrapper">
+              <img src="./portfolio/focus-on-goals-streetwear.png"
+                alt="Focus On The Goals Cyber Green Streetwear T-Shirt by MD Biplob" class="project-img"
+                loading="lazy" />
+              <span class="project-overlay-badge">CYBER STREETWEAR</span>
+              <div class="project-zoom-indicator">
+                <i data-lucide="maximize-2" style="width: 18px; height: 18px;"></i>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category">Urban Minimalist Graphic</span>
+              <h3 class="project-title">"Focus On The Goals" Cyber-Green Oversized Tee</h3>
+              <p class="project-desc">
+                High-contrast bold typographic streetwear design with electric neon green accents, symmetrical vertical
+                alignment, and modern streetwear silhouette framing.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Cyber Green</span>
+                <span class="project-tag">Bold Typography</span>
+                <span class="project-tag">Heavyweight Tee</span>
+                <span class="project-tag">Apparel Design</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Design 5: Next Level 01 -->
+          <div class="project-card reveal-card" data-project-id="p5" data-category="streetwear pod">
+            <div class="project-thumb-img-wrapper">
+              <img src="./portfolio/next-level-cyber-tee.jpg"
+                alt="Next Level Cyberpunk Techwear Graphic Tee by MD Biplob" class="project-img" loading="lazy" />
+              <span class="project-overlay-badge">TECHWEAR EDITION</span>
+              <div class="project-zoom-indicator">
+                <i data-lucide="maximize-2" style="width: 18px; height: 18px;"></i>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category">Cyberpunk Techwear</span>
+              <h3 class="project-title">"Next Level — One Level Up" Heavyweight Tee</h3>
+              <p class="project-desc">
+                Technical cyber streetwear graphic featuring futuristic wireframe numbers, coordinate grids, and bold
+                lime-neon typography crafted for modern apparel lines.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Techwear</span>
+                <span class="project-tag">Lime Neon</span>
+                <span class="project-tag">Graphic Tee</span>
+                <span class="project-tag">Street Fashion</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Design 6: Unbeaten Denim Typography -->
+          <div class="project-card reveal-card" data-project-id="p6" data-category="streetwear typography pod">
+            <div class="project-thumb-img-wrapper">
+              <img src="./portfolio/unbeaten-brooklyn-denim.png"
+                alt="UNBEATEN Brooklyn Superior Denim T-Shirt Design by MD Biplob" class="project-img" loading="lazy" />
+              <span class="project-overlay-badge">DENIM STREETWEAR</span>
+              <div class="project-zoom-indicator">
+                <i data-lucide="maximize-2" style="width: 18px; height: 18px;"></i>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category">Streetwear & Denim Typography</span>
+              <h3 class="project-title">"UNBEATEN // Brooklyn 1986" Streetwear Typography Tee</h3>
+              <p class="project-desc">
+                High-impact urban apparel concept featuring stacked amber-gold and white typography, horizontal speed shadow trails, and industrial label specs engineered for commercial apparel drops.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Streetwear</span>
+                <span class="project-tag">Amber Gold</span>
+                <span class="project-tag">Brooklyn Denim</span>
+                <span class="project-tag">Screen Print</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Design 7: Savage Gothic Metal Typography -->
+          <div class="project-card reveal-card" data-project-id="p7" data-category="typography streetwear">
+            <div class="project-thumb-img-wrapper">
+              <img src="./portfolio/savage-gothic-metal-typography.png"
+                alt="SAVAGE Heavy Metal Gothic Typography T-Shirt Design by MD Biplob" class="project-img" loading="lazy" />
+              <span class="project-overlay-badge">GOTHIC METALWEAR</span>
+              <div class="project-zoom-indicator">
+                <i data-lucide="maximize-2" style="width: 18px; height: 18px;"></i>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category">Gothic Lettering & Metalwear</span>
+              <h3 class="project-title">"SAVAGE" Heavy Metal Gothic Lettering & Metalwear</h3>
+              <p class="project-desc">
+                Aggressive blackletter typography crafted with sharp spiky thorn flourishes, chrome-metallic bevel shading, and distressed weathering tailored for underground rock & gothic merchandise.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Gothic Metal</span>
+                <span class="project-tag">Spiked Lettering</span>
+                <span class="project-tag">Darkwear</span>
+                <span class="project-tag">Chrome Vector</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Design 8: Never Look Back Grunge Brush Typography -->
+          <div class="project-card reveal-card" data-project-id="p8" data-category="streetwear typography pod">
+            <div class="project-thumb-img-wrapper">
+              <img src="./portfolio/never-look-back-grunge-apparel.png"
+                alt="Never Look Back Urban Grunge Brush Typography T-Shirt Design by MD Biplob" class="project-img" loading="lazy" />
+              <span class="project-overlay-badge">URBAN GRUNGE</span>
+              <div class="project-zoom-indicator">
+                <i data-lucide="maximize-2" style="width: 18px; height: 18px;"></i>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category">Urban Grunge & Brush Art</span>
+              <h3 class="project-title">"NEVER LOOK BACK — Brooklyn NYC" Grunge Brush Typography</h3>
+              <p class="project-desc">
+                Raw, dynamic calligraphic brush-stroke typography enclosed within a vivid neon crimson geometric bounding frame with distressed splatter textures for street culture apparel lines.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Brush Typography</span>
+                <span class="project-tag">Neon Red Frame</span>
+                <span class="project-tag">Brooklyn NYC</span>
+                <span class="project-tag">DTG Ready</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Design 9: Break The Rules Cyber Techwear Graphic -->
+          <div class="project-card reveal-card" data-project-id="p9" data-category="streetwear pod typography">
+            <div class="project-thumb-img-wrapper">
+              <img src="./portfolio/break-the-rules-techwear.png"
+                alt="Break The Rules NYC Sport System Techwear T-Shirt Design by MD Biplob" class="project-img" loading="lazy" />
+              <span class="project-overlay-badge">CYBER TECHWEAR</span>
+              <div class="project-zoom-indicator">
+                <i data-lucide="maximize-2" style="width: 18px; height: 18px;"></i>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category">Cyber Techwear & Sports Apparel</span>
+              <h3 class="project-title">"BREAK THE RULES // NYC Sport System" Techwear Graphic Tee</h3>
+              <p class="project-desc">
+                Modern cyber athletic techwear graphic combining bold vertical typography, segmented canary yellow accent blocks, diagonal coordinate grids, and technical sportswear specs.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Techwear</span>
+                <span class="project-tag">Sport System</span>
+                <span class="project-tag">Yellow Accent</span>
+                <span class="project-tag">Apparel Design</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Design 10: Beach Please Retro Tropical Sunglasses Vector Art -->
+          <div class="project-card reveal-card" data-project-id="p10" data-category="illustration pod">
+            <div class="project-thumb-img-wrapper">
+              <img src="./portfolio/beach-please-summer-apparel.png"
+                alt="Beach Please Retro Tropical Sunglasses Vector Art T-Shirt Design by MD Biplob" class="project-img" loading="lazy" />
+              <span class="project-overlay-badge">SUMMER VECTOR ART</span>
+              <div class="project-zoom-indicator">
+                <i data-lucide="maximize-2" style="width: 18px; height: 18px;"></i>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category">Vector Illustration & Summer Apparel</span>
+              <h3 class="project-title">"BEACH PLEASE" Retro Tropical Sunglasses Vector Art</h3>
+              <p class="project-desc">
+                Vibrant summer resort apparel artwork featuring classic sunglasses reflecting a sun-drenched tropical ocean landscape, coastal palms, and golden sunset paired with playful script typography.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Summer Art</span>
+                <span class="project-tag">Tropical Sunset</span>
+                <span class="project-tag">Pop Illustration</span>
+                <span class="project-tag">Color Separation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. References & Endorsements -->
+    <section class="references-section" id="references">
+      <div class="container">
+        <div class="section-header reveal-card">
+          <span class="section-tag">Professional Network</span>
+          <h2 class="section-title">PROFESSIONAL <span class="gradient-text">REFERENCES</span></h2>
+          <p class="section-desc">
+            Endorsements from executive leadership and management in apparel and fashion manufacturing.
+          </p>
+        </div>
+
+        <div class="references-grid">
+          <div class="reference-card reveal-card">
+            <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 0.3rem;">Md Rafiqul Islam Khan</h3>
+            <p class="mono" style="color: var(--accent-primary); font-size: 0.85rem; margin-bottom: 0.8rem;">
+              Deputy General Manager (DGM)
+            </p>
+            <p style="font-weight: 700; font-size: 1.1rem; color: var(--text-main); margin-bottom: 0.8rem;">Fabrilife
+            </p>
+            <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
+              "Biplob brings creative energy, technical discipline, and print-ready excellence to custom apparel art."
+            </p>
+          </div>
+
+          <div class="reference-card reveal-card">
+            <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 0.3rem;">Omor Farokh</h3>
+            <p class="mono" style="color: var(--accent-secondary); font-size: 0.85rem; margin-bottom: 0.8rem;">
+              Managing Director
+            </p>
+            <p style="font-weight: 700; font-size: 1.1rem; color: var(--text-main); margin-bottom: 0.8rem;">STREET
+              THREADX</p>
+            <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
+              "Exceptional eye for streetwear trends, tech pack accuracy, and seamless manufacturer collaboration."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Contact & Hire Portal -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="section-header reveal-card">
+          <span class="section-tag">Let's Connect</span>
+          <h2 class="section-title">START A <span class="neon-text">PROJECT TOGETHER</span></h2>
+          <p class="section-desc">
+            Thank you for considering my application. I eagerly await the chance to contribute to your team's continued
+            success.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Direct Contact Information -->
+          <div class="glass-card reveal-card">
+            <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.2rem;">
+              <i data-lucide="mail"
+                style="vertical-align: middle; color: var(--accent-primary); margin-right: 8px;"></i>
+              Direct Channels & Socials
+            </h3>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/biplob-art/" target="_blank" class="contact-card-item">
+              <div class="contact-card-icon">
+                <i data-lucide="linkedin" style="color: #0a66c2;"></i>
+              </div>
+              <div>
+                <div class="mono" style="font-size: 0.75rem; color: var(--text-muted);">LINKEDIN PROFILE</div>
+                <div style="font-weight: 600; font-size: 1rem; color: #0a66c2;">linkedin.com/in/biplob-art</div>
+              </div>
+            </a>
+
+            <!-- Behance -->
+            <a href="https://www.behance.net/biplob-art" target="_blank" class="contact-card-item">
+              <div class="contact-card-icon">
+                <i data-lucide="globe" style="color: #00f3ff;"></i>
+              </div>
+              <div>
+                <div class="mono" style="font-size: 0.75rem; color: var(--text-muted);">BEHANCE PORTFOLIO</div>
+                <div style="font-weight: 600; font-size: 1rem; color: #00f3ff;">behance.net/biplob-art</div>
+              </div>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:talukderbiplob498@gmail.com" class="contact-card-item">
+              <div class="contact-card-icon">
+                <i data-lucide="mail"></i>
+              </div>
+              <div>
+                <div class="mono" style="font-size: 0.75rem; color: var(--text-muted);">EMAIL</div>
+                <div style="font-weight: 600; font-size: 1rem;">talukderbiplob498@gmail.com</div>
+              </div>
+            </a>
+
+            <!-- WhatsApp / Phone -->
+            <a href="https://wa.me/8801340276600" target="_blank" class="contact-card-item">
+              <div class="contact-card-icon">
+                <i data-lucide="phone"></i>
+              </div>
+              <div>
+                <div class="mono" style="font-size: 0.75rem; color: var(--text-muted);">PHONE / WHATSAPP</div>
+                <div style="font-weight: 600; font-size: 1rem;">+8801340276600</div>
+              </div>
+            </a>
+
+            <!-- Location -->
+            <div class="contact-card-item">
+              <div class="contact-card-icon">
+                <i data-lucide="map-pin"></i>
+              </div>
+              <div>
+                <div class="mono" style="font-size: 0.75rem; color: var(--text-muted);">LOCATION</div>
+                <div style="font-weight: 600; font-size: 1rem;">Mymensingh, Bangladesh</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Firebase Cloud Inquiry Form -->
+          <div class="glass-card reveal-card">
+            <div
+              style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+              <h3 style="font-size: 1.5rem; font-weight: 700;">
+                <i data-lucide="database" style="vertical-align: middle; color: #00ff88; margin-right: 8px;"></i>
+                Project Inquiry Portal
+              </h3>
+              <span class="skill-badge highlight"
+                style="font-size: 0.72rem; padding: 0.2rem 0.5rem; border-color: #00ff88; color: #00ff88; background: rgba(0,255,136,0.1);">
+                FIREBASE SYNC
+              </span>
+            </div>
+
+            <!-- Feedback Alert Banner -->
+            <div id="inquiry-alert" class="inquiry-alert"></div>
+
+            <form id="inquiry-form" class="inquiry-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="inquiry-name">Your Full Name *</label>
+                  <input type="text" id="inquiry-name" name="name" class="form-input" placeholder="e.g. Alex Johnson"
+                    required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="inquiry-email">Email Address *</label>
+                  <input type="email" id="inquiry-email" name="email" class="form-input"
+                    placeholder="e.g. alex@brand.com" required />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="inquiry-phone">WhatsApp / Phone</label>
+                  <input type="tel" id="inquiry-phone" name="phone" class="form-input"
+                    placeholder="+1 (555) 000-0000" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="inquiry-type">Project Category *</label>
+                  <select id="inquiry-type" name="projectType" class="form-select">
+                    <option value="Streetwear T-Shirt Drop">Streetwear T-Shirt Drop</option>
+                    <option value="Custom Typography & Lettering">Custom Typography & Lettering</option>
+                    <option value="Vector Pop Art / Illustration">Vector Pop Art / Illustration</option>
+                    <option value="Complete Apparel Tech Pack">Complete Apparel Tech Pack & Specs</option>
+                    <option value="Print on Demand (POD) Lineup">Print on Demand (POD) Lineup</option>
+                    <option value="Full Brand Merchandise & Identity">Full Brand Merchandise & Identity</option>
+                    <option value="Other Custom Creative Work">Other Custom Creative Work</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="inquiry-quantity">Estimated Volume / Scope</label>
+                <select id="inquiry-quantity" name="quantity" class="form-select">
+                  <option value="1-5 Designs / Prototype Sample">1-5 Designs / Prototype Sample</option>
+                  <option value="5-20 Designs / Season Drop">5-20 Designs / Season Drop</option>
+                  <option value="20-100+ Pieces / Bulk Production">20-100+ Pieces / Bulk Production</option>
+                  <option value="Full Brand Launch Collection">Full Brand Launch Collection</option>
+                  <option value="Ongoing Retainer / Full-Time Designer">Ongoing Retainer / Full-Time Designer</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="inquiry-message">Project Brief & Details *</label>
+                <textarea id="inquiry-message" name="message" class="form-textarea"
+                  placeholder="Tell me about your apparel concept, target audience, preferred colors, and deadline..."
+                  required></textarea>
+              </div>
+
+              <button type="submit" id="inquiry-submit-btn" class="cyber-btn"
+                style="width: 100%; justify-content: center; padding: 0.85rem 1.5rem;">
+                <span class="form-spinner" id="submit-btn-spinner"></span>
+                <i data-lucide="send" style="width: 16px; height: 16px;"></i>
+                <span id="submit-btn-text">SEND INQUIRY TO DATABASE</span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Quick Action & Warp Jump Card -->
+        <div class="glass-card reveal-card"
+          style="margin-top: 2.5rem; display: flex; flex-direction: column; justify-content: center; text-align: center; padding: 3rem;">
+          <div class="hero-badge" style="margin: 0 auto 1.5rem auto;">
+            <span class="pulse-dot"></span>
+            <span>AVAILABLE FOR NEW PROJECTS & GLOBAL COMMISSIONS</span>
+          </div>
+          <h3 style="font-size: 2rem; font-weight: 800; margin-bottom: 1rem;">Let's Build Great Apparel</h3>
+          <p
+            style="color: var(--text-muted); line-height: 1.7; margin-bottom: 2rem; max-width: 680px; margin-left: auto; margin-right: auto;">
+            From launching a new clothing brand to revamping merchandise or hiring a full-time designer — I am ready to
+            bring your vision to life.
+          </p>
+          <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <a href="https://wa.me/8801340276600" target="_blank" class="cyber-btn" style="padding: 0.9rem 1.8rem;">
+              <i data-lucide="message-circle" style="width: 18px; height: 18px;"></i>
+              <span>CHAT ON WHATSAPP</span>
+            </a>
+            <a href="https://www.linkedin.com/in/biplob-art/" target="_blank" class="cyber-btn linkedin-btn"
+              style="padding: 0.9rem 1.8rem;">
+              <i data-lucide="linkedin" style="width: 18px; height: 18px;"></i>
+              <span>CONNECT ON LINKEDIN</span>
+            </a>
+            <a href="https://www.behance.net/biplob-art" target="_blank" class="cyber-btn behance-btn"
+              style="padding: 0.9rem 1.8rem;">
+              <i data-lucide="external-link" style="width: 18px; height: 18px;"></i>
+              <span>BEHANCE PROFILE</span>
+            </a>
+            <button class="cyber-btn secondary trigger-warp-btn">
+              <i data-lucide="zap" style="width: 18px; height: 18px;"></i>
+              <span>WARP DRIVE JUMP</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container footer-content">
+        <div style="display: flex; align-items: center; gap: 0.6rem;">
+          <div class="logo-icon" style="width: 26px; height: 26px;">
+            <i data-lucide="palette" style="width: 14px; height: 14px; color: #000;"></i>
+          </div>
+          <span style="font-weight: 700; color: var(--text-main);">MD BIPLOB // GRAPHIC & APPAREL DESIGNER</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap;">
+          <a href="https://www.linkedin.com/in/biplob-art/" target="_blank"
+            style="color: #0a66c2; text-decoration: none; font-family: var(--font-mono); font-size: 0.82rem;">LINKEDIN:
+            BIPLOB-ART</a>
+          <a href="https://www.behance.net/biplob-art" target="_blank"
+            style="color: var(--accent-primary); text-decoration: none; font-family: var(--font-mono); font-size: 0.82rem;">BEHANCE:
+            BIPLOB-ART</a>
+
+          <!-- Admin Portal Access Trigger Button -->
+          <button class="cyber-btn admin-portal-btn" id="open-admin-btn" title="Open Admin Control Portal & CRM">
+            <i data-lucide="shield-check" style="width: 14px; height: 14px; color: var(--accent-primary);"></i>
+            <span>ADMIN PORTAL</span>
+            <span class="admin-status-dot"></span>
+          </button>
+
+          <p class="mono" style="font-size: 0.8rem;">© 2026 MD BIPLOB. ALL RIGHTS RESERVED.</p>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Interactive Project Modal (High-Resolution Zoom & Details) -->
+  <div class="modal-backdrop" id="project-modal">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close-btn">&times;</button>
+      <span class="project-category" id="modal-category">CATEGORY</span>
+      <h2 id="modal-title" style="font-size: 1.8rem; margin: 0.4rem 0 0.8rem 0; font-weight: 800;">Project Title</h2>
+
+      <!-- Full Preview Image -->
+      <div class="modal-img-container">
+        <img id="modal-img" src="" alt="Project Preview" class="modal-img" />
+      </div>
+
+      <p id="modal-desc" style="color: var(--text-muted); line-height: 1.7; margin-bottom: 1.4rem; font-size: 0.95rem;">
+        Project description goes here...
+      </p>
+
+      <div class="project-tags" id="modal-tags" style="margin-bottom: 2rem;"></div>
+
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+        <a href="https://www.linkedin.com/in/biplob-art/" target="_blank" class="cyber-btn linkedin-btn">
+          <i data-lucide="linkedin" style="width: 16px; height: 16px;"></i>
+          <span>CONTACT ON LINKEDIN</span>
+        </a>
+        <a href="https://www.behance.net/biplob-art" target="_blank" class="cyber-btn behance-btn">
+          <i data-lucide="external-link" style="width: 16px; height: 16px;"></i>
+          <span>VIEW ON BEHANCE</span>
+        </a>
+        <a href="https://wa.me/8801340276600" target="_blank" class="cyber-btn">
+          <i data-lucide="message-circle" style="width: 16px; height: 16px;"></i>
+          <span>WHATSAPP CHAT</span>
+        </a>
+        <button class="cyber-btn secondary"
+          onclick="document.getElementById('project-modal').classList.remove('active');">
+          <span>CLOSE PREVIEW</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       ADMIN CONTROL PORTAL & CRM MODAL
+       ========================================================================== -->
+  <div class="admin-modal-backdrop" id="admin-modal">
+    <div class="admin-modal-content">
+      
+      <!-- Top Header Bar -->
+      <div class="admin-header-bar">
+        <div class="admin-identity">
+          <div class="logo-icon" style="width: 30px; height: 30px;">
+            <i data-lucide="terminal" style="width: 16px; height: 16px; color: #000;"></i>
+          </div>
+          <div>
+            <div style="font-weight: 800; font-size: 1rem; letter-spacing: 1px; color: #fff; display: flex; align-items: center; gap: 0.5rem;">
+              <span>ADMIN <span class="neon-text">CONTROL HUB</span></span>
+              <span id="admin-active-user-badge" class="admin-user-pill">
+                <i data-lucide="shield-check" style="width: 12px; height: 12px; color: #00ff88;"></i>
+                <span id="admin-user-email-label">talukderbiplob498@gmail.com</span>
+              </span>
+            </div>
+            <div class="mono" style="font-size: 0.7rem; color: var(--text-muted);">MD BIPLOB // MASTER PORTAL</div>
+          </div>
+        </div>
+
+        <div class="admin-actions-group">
+          <span class="admin-badge-pill">
+            <span class="admin-status-dot"></span> SYSTEM ACTIVE
+          </span>
+          <button class="icon-btn" id="admin-lock-btn" title="Lock / Logout Admin" style="width: 32px; height: 32px;">
+            <i data-lucide="lock" style="width: 14px; height: 14px; color: #ffaa00;"></i>
+          </button>
+          <button class="modal-close" id="admin-modal-close" style="position: static; font-size: 1.4rem;" title="Close Window">&times;</button>
+        </div>
+      </div>
+
+      <!-- 1. Google Auth & Passcode Lock Screen (Shown when locked) -->
+      <div id="admin-auth-section" class="admin-auth-container">
+        <div class="admin-lock-icon">
+          <i data-lucide="shield-check" style="width: 30px; height: 30px; color: var(--accent-primary);"></i>
+        </div>
+        <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.4rem;">Admin Control Login</h3>
+        <p style="color: var(--text-muted); font-size: 0.86rem; margin-bottom: 1.5rem;">
+          Authenticate with Google or master passcode to access full portfolio & CRM management.
+        </p>
+
+        <!-- Google OAuth Sign In Button -->
+        <button id="google-signin-btn" class="google-auth-btn" type="button" title="Sign In with Authorized Google Account">
+          <svg class="google-svg-icon" viewBox="0 0 24 24" width="22" height="22">
+            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+          </svg>
+          <div style="text-align: left; line-height: 1.25;">
+            <div style="font-weight: 700; font-size: 0.94rem; color: #111827;">Sign in with Google</div>
+            <div class="mono" style="font-size: 0.72rem; color: #4b5563;">talukderbiplob498@gmail.com</div>
+          </div>
+          <span class="google-owner-tag">VERIFIED</span>
+        </button>
+
+        <div class="admin-auth-divider">
+          <span>OR MASTER PASSCODE</span>
+        </div>
+
+        <form id="admin-pin-form">
+          <input type="password" id="admin-pin-input" class="admin-pin-field" placeholder="••••" maxlength="12" autocomplete="off" autofocus />
+          <div id="admin-pin-error" style="color: #ff007f; font-size: 0.8rem; margin-bottom: 1rem; display: none;"></div>
+          <button type="submit" class="cyber-btn" style="width: 100%; justify-content: center; padding: 0.85rem;">
+            <i data-lucide="key" style="width: 16px; height: 16px;"></i>
+            <span>UNLOCK WITH PASSCODE</span>
+          </button>
+        </form>
+
+        <button id="admin-autopay-btn" class="mono" style="background: none; border: none; color: var(--accent-primary); font-size: 0.76rem; margin-top: 1.2rem; cursor: pointer; text-decoration: underline;">
+          ⚡ Quick Passcode Unlock (2026)
+        </button>
+      </div>
+
+      <!-- 2. Main Dashboard (Shown when unlocked) -->
+      <div id="admin-dashboard-section" style="display: none; flex-direction: column; flex: 1; overflow: hidden;">
+        
+        <!-- Navigation Tabs -->
+        <div class="admin-tabs-nav">
+          <button class="admin-nav-tab active" data-tab="overview">
+            <i data-lucide="layout-dashboard" style="width: 15px; height: 15px;"></i>
+            <span>Overview / Analytics</span>
+          </button>
+          <button class="admin-nav-tab" data-tab="projects">
+            <i data-lucide="palette" style="width: 15px; height: 15px;"></i>
+            <span>Project Manager</span>
+          </button>
+          <button class="admin-nav-tab" data-tab="skills">
+            <i data-lucide="award" style="width: 15px; height: 15px;"></i>
+            <span>Skills & Certifications</span>
+          </button>
+          <button class="admin-nav-tab" data-tab="crm">
+            <i data-lucide="message-square" style="width: 15px; height: 15px;"></i>
+            <span>Message Center</span>
+            <span id="admin-inquiry-badge" class="admin-badge-pill" style="padding: 0.1rem 0.4rem; font-size: 0.65rem; background: #ff007f; color: #fff; border-color: #ff007f;">0</span>
+          </button>
+          <button class="admin-nav-tab" data-tab="settings">
+            <i data-lucide="user-cog" style="width: 15px; height: 15px;"></i>
+            <span>Profile & Settings</span>
+          </button>
+        </div>
+
+        <!-- Tab Panes Content -->
+        <div class="admin-tab-body">
+          
+          <!-- Tab 1: Overview & Analytics -->
+          <div class="admin-tab-pane active" id="admin-tab-overview">
+            <div class="admin-stat-grid">
+              <div class="admin-stat-card">
+                <div class="admin-stat-header">
+                  <span class="admin-stat-label">Live Case Studies</span>
+                  <i data-lucide="layers" style="color: var(--accent-primary); width: 20px; height: 20px;"></i>
+                </div>
+                <div class="admin-stat-val" id="stat-total-projects">10</div>
+                <p class="mono" style="font-size: 0.72rem; color: #00ff88; margin-top: 4px;">Active in 3D Gallery</p>
+              </div>
+
+              <div class="admin-stat-card">
+                <div class="admin-stat-header">
+                  <span class="admin-stat-label">Total Project Views</span>
+                  <i data-lucide="eye" style="color: #00f3ff; width: 20px; height: 20px;"></i>
+                </div>
+                <div class="admin-stat-val" id="stat-total-views">2,850</div>
+                <p class="mono" style="font-size: 0.72rem; color: var(--accent-primary); margin-top: 4px;">Live Portfolio Traffic</p>
+              </div>
+
+              <div class="admin-stat-card">
+                <div class="admin-stat-header">
+                  <span class="admin-stat-label">Unread Messages</span>
+                  <i data-lucide="mail-warning" style="color: #ff007f; width: 20px; height: 20px;"></i>
+                </div>
+                <div class="admin-stat-val" id="stat-unread-messages" style="color: #ff007f;">0</div>
+                <p class="mono" style="font-size: 0.72rem; color: var(--text-muted); margin-top: 4px;">Inquiry Inbox Leads</p>
+              </div>
+
+              <div class="admin-stat-card">
+                <div class="admin-stat-header">
+                  <span class="admin-stat-label">Active Deals</span>
+                  <i data-lucide="trending-up" style="color: #ffaa00; width: 20px; height: 20px;"></i>
+                </div>
+                <div class="admin-stat-val" id="stat-active-deals">0</div>
+                <p class="mono" style="font-size: 0.72rem; color: #ffaa00; margin-top: 4px;">In Discussion / Quoted</p>
+              </div>
+
+              <div class="admin-stat-card">
+                <div class="admin-stat-header">
+                  <span class="admin-stat-label">Total Inquiries</span>
+                  <i data-lucide="inbox" style="color: #00ff88; width: 20px; height: 20px;"></i>
+                </div>
+                <div class="admin-stat-val" id="stat-total-inquiries">0</div>
+                <p class="mono" style="font-size: 0.72rem; color: var(--text-muted); margin-top: 4px;">CRM Leads Logged</p>
+              </div>
+
+              <div class="admin-stat-card">
+                <div class="admin-stat-header">
+                  <span class="admin-stat-label">Database Sync</span>
+                  <i data-lucide="database" style="color: #00ff88; width: 20px; height: 20px;"></i>
+                </div>
+                <div class="admin-stat-val" style="font-size: 1rem; color: #00ff88; margin-top: 6px;" id="stat-db-status">ONLINE (FIRESTORE)</div>
+                <p class="mono" style="font-size: 0.72rem; color: var(--text-muted); margin-top: 4px;">NoSQL Cloud + Local Cache</p>
+              </div>
+            </div>
+
+            <!-- Quick Action Shortcuts -->
+            <div class="glass-card" style="padding: 1.5rem; margin-bottom: 1.5rem;">
+              <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.8rem;">⚡ Quick Command Shortcuts</h4>
+              <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+                <button class="cyber-btn" onclick="document.querySelector('.admin-nav-tab[data-tab=\'projects\']').click();">
+                  <i data-lucide="plus-circle" style="width: 15px; height: 15px;"></i>
+                  <span>Add Case Study</span>
+                </button>
+                <button class="cyber-btn secondary" onclick="document.querySelector('.admin-nav-tab[data-tab=\'skills\']').click();">
+                  <i data-lucide="award" style="width: 15px; height: 15px;"></i>
+                  <span>Manage Skills & Certs</span>
+                </button>
+                <button class="cyber-btn secondary" onclick="document.querySelector('.admin-nav-tab[data-tab=\'crm\']').click();">
+                  <i data-lucide="message-square" style="width: 15px; height: 15px;"></i>
+                  <span>Review Inquiries</span>
+                </button>
+                <button class="cyber-btn secondary" onclick="document.querySelector('.admin-nav-tab[data-tab=\'settings\']').click();">
+                  <i data-lucide="user-cog" style="width: 15px; height: 15px;"></i>
+                  <span>Edit Profile & Bio</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 2: Project Manager -->
+          <div class="admin-tab-pane" id="admin-tab-projects">
+            <div class="admin-projects-grid-layout">
+              
+              <!-- Form: Add or Edit Project -->
+              <div class="glass-card" style="padding: 1.5rem;">
+                <h4 id="admin-project-form-heading" style="font-size: 1.15rem; font-weight: 800; margin-bottom: 1rem; color: var(--accent-primary);">
+                  ➕ Add New Portfolio Case Study
+                </h4>
+
+                <form id="admin-project-form">
+                  <input type="hidden" id="proj-form-id" />
+                  
+                  <div class="form-group" style="margin-bottom: 0.8rem;">
+                    <label class="form-label" style="font-size: 0.75rem;">Case Study Title *</label>
+                    <input type="text" id="proj-form-title" class="form-input" placeholder="e.g. Street ThreadX — Urban Streetwear Lineup" required />
+                  </div>
+
+                  <div class="form-row" style="margin-bottom: 0.8rem;">
+                    <div class="form-group">
+                      <label class="form-label" style="font-size: 0.75rem;">Category Name</label>
+                      <input type="text" id="proj-form-category" class="form-input" placeholder="e.g. Streetwear Campaign" />
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" style="font-size: 0.75rem;">Overlay Badge</label>
+                      <input type="text" id="proj-form-badge" class="form-input" placeholder="e.g. STREETWEAR" />
+                    </div>
+                  </div>
+
+                  <div class="form-row" style="margin-bottom: 0.8rem;">
+                    <div class="form-group">
+                      <label class="form-label" style="font-size: 0.75rem;">Filter Category</label>
+                      <select id="proj-form-filter" class="form-select">
+                        <option value="streetwear pod">Streetwear Drops</option>
+                        <option value="typography pod">Typography Art</option>
+                        <option value="illustration pod">Vector Illustration</option>
+                        <option value="pod techwear">POD & Techwear</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" style="font-size: 0.75rem;">Image URL / Canva Thumbnail</label>
+                      <input type="text" id="proj-form-image" class="form-input" placeholder="./portfolio/street-threadx-collection.png" />
+                    </div>
+                  </div>
+
+                  <div class="form-row" style="margin-bottom: 0.8rem;">
+                    <div class="form-group">
+                      <label class="form-label" style="font-size: 0.75rem;">Live Behance / Store Link</label>
+                      <input type="url" id="proj-form-liveurl" class="form-input" placeholder="https://www.behance.net/biplob-art" />
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" style="font-size: 0.75rem;">GitHub / Repo Link</label>
+                      <input type="url" id="proj-form-githuburl" class="form-input" placeholder="https://github.com" />
+                    </div>
+                  </div>
+
+                  <div class="form-group" style="margin-bottom: 0.8rem;">
+                    <label class="form-label" style="font-size: 0.75rem;">Case Study Description & Print Specs</label>
+                    <textarea id="proj-form-desc" class="form-textarea" style="min-height: 70px;" placeholder="Detailed design description, apparel print techniques, and inspiration..."></textarea>
+                  </div>
+
+                  <div class="form-group" style="margin-bottom: 0.8rem;">
+                    <label class="form-label" style="font-size: 0.75rem;">Tech Stack & Tags (comma-separated)</label>
+                    <input type="text" id="proj-form-tags" class="form-input" placeholder="Adobe Illustrator, Screen Print, Color Separation, Tech Pack" />
+                  </div>
+
+                  <div style="margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.6rem;">
+                    <input type="checkbox" id="proj-form-featured" style="width: 16px; height: 16px; cursor: pointer;" checked />
+                    <label for="proj-form-featured" style="font-size: 0.85rem; font-weight: 600; cursor: pointer;">Mark as Featured Project on Live Site</label>
+                  </div>
+
+                  <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
+                    <button type="submit" id="submit-project-btn" class="cyber-btn" style="flex: 1; justify-content: center;">
+                      <i data-lucide="plus" style="width: 14px; height: 14px;"></i>
+                      <span>ADD CASE STUDY TO LIVE SITE</span>
+                    </button>
+                    <button type="button" id="cancel-edit-project-btn" class="cyber-btn secondary" style="display: none;">
+                      <span>CANCEL</span>
+                    </button>
+                  </div>
+                </form>
+              </div>
+
+              <!-- List of existing projects -->
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem;">
+                  <h4 style="font-size: 1.1rem; font-weight: 700;">Live Case Studies</h4>
+                  <span class="mono" style="font-size: 0.75rem; color: var(--text-muted);">Real-time Sync</span>
+                </div>
+                <div id="admin-projects-list" style="max-height: 540px; overflow-y: auto; padding-right: 0.4rem;">
+                  <!-- Projects populated dynamically -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 3: Skills & Certifications Manager -->
+          <div class="admin-tab-pane" id="admin-tab-skills">
+            <div class="admin-projects-grid-layout">
+              
+              <!-- Skills Management Form & List -->
+              <div class="glass-card" style="padding: 1.5rem;">
+                <h4 style="font-size: 1.1rem; font-weight: 800; margin-bottom: 1rem; color: var(--accent-primary); display: flex; align-items: center; gap: 0.5rem;">
+                  <i data-lucide="sliders" style="width: 18px; height: 18px;"></i>
+                  Technical Skills & Proficiencies
+                </h4>
+
+                <form id="admin-skill-form" style="margin-bottom: 1.5rem;">
+                  <div class="form-row" style="margin-bottom: 0.8rem;">
+                    <div class="form-group">
+                      <label class="form-label" style="font-size: 0.75rem;">Skill / Tool Name *</label>
+                      <input type="text" id="skill-form-name" class="form-input" placeholder="e.g. Adobe Illustrator" required />
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" style="font-size: 0.75rem;">Category</label>
+                      <select id="skill-form-category" class="form-select">
+                        <option value="Creative Apparel & Print">Creative Apparel & Print</option>
+                        <option value="Industry & Production">Industry & Production</option>
+                        <option value="Software & Technology">Software & Technology</option>
+                        <option value="Engineering & Logic">Engineering & Logic</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-row" style="margin-bottom: 0.8rem;">
+                    <div class="form-group">
+                      <div style="display: flex; justify-content: space-between;">
+                        <label class="form-label" style="font-size: 0.75rem;">Proficiency (1-100%)</label>
+                        <span id="skill-form-proficiency-val" class="mono" style="color: var(--accent-primary); font-size: 0.75rem;">90%</span>
+                      </div>
+                      <input type="range" id="skill-form-proficiency" min="10" max="100" value="90" style="width: 100%; accent-color: var(--accent-primary);" />
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" style="font-size: 0.75rem;">Mastery Level Label</label>
+                      <input type="text" id="skill-form-level" class="form-input" placeholder="e.g. Master Specialist" />
+                    </div>
+                  </div>
+
+                  <div style="display: flex; gap: 0.6rem;">
+                    <button type="submit" id="submit-skill-btn" class="cyber-btn" style="flex: 1; justify-content: center;">
+                      <i data-lucide="plus" style="width: 14px; height: 14px;"></i>
+                      <span>ADD SKILL</span>
+                    </button>
+                    <button type="button" id="cancel-edit-skill-btn" class="cyber-btn secondary" style="display: none;">
+                      <span>CANCEL</span>
+                    </button>
+                  </div>
+                </form>
+
+                <div id="admin-skills-list" style="max-height: 280px; overflow-y: auto;">
+                  <!-- Skills list populated dynamically -->
+                </div>
+              </div>
+
+              <!-- Certifications & Training Programs -->
+              <div class="glass-card" style="padding: 1.5rem;">
+                <h4 style="font-size: 1.1rem; font-weight: 800; margin-bottom: 1rem; color: #00ff88; display: flex; align-items: center; gap: 0.5rem;">
+                  <i data-lucide="award" style="width: 18px; height: 18px;"></i>
+                  Certifications & Bootcamps
+                </h4>
+
+                <form id="admin-cert-form" style="margin-bottom: 1.5rem;">
+                  <div class="form-group" style="margin-bottom: 0.8rem;">
+                    <label class="form-label" style="font-size: 0.75rem;">Certification / Program Title *</label>
+                    <input type="text" id="cert-form-title" class="form-input" placeholder="e.g. Advanced Vector Illustration & Masterclass" required />
+                  </div>
+
+                  <div class="form-row" style="margin-bottom: 0.8rem;">
+                    <div class="form-group">
+                      <label class="form-label" style="font-size: 0.75rem;">Issuing Organization / Bootcamp</label>
+                      <input type="text" id="cert-form-issuer" class="form-input" placeholder="e.g. Design Institute" />
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" style="font-size: 0.75rem;">Year</label>
+                      <input type="text" id="cert-form-year" class="form-input" placeholder="2026" />
+                    </div>
+                  </div>
+
+                  <div class="form-group" style="margin-bottom: 1rem;">
+                    <label class="form-label" style="font-size: 0.75rem;">Badge Type</label>
+                    <input type="text" id="cert-form-badge" class="form-input" placeholder="VERIFIED" />
+                  </div>
+
+                  <button type="submit" class="cyber-btn" style="width: 100%; justify-content: center;">
+                    <i data-lucide="plus" style="width: 14px; height: 14px;"></i>
+                    <span>ADD CERTIFICATION</span>
+                  </button>
+                </form>
+
+                <div id="admin-certs-list" style="max-height: 280px; overflow-y: auto;">
+                  <!-- Certifications populated dynamically -->
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Tab 4: Message Center (CRM) -->
+          <div class="admin-tab-pane" id="admin-tab-crm">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.8rem;">
+              <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
+                <button class="cyber-btn secondary crm-filter-btn active" data-filter="all" style="padding: 0.4rem 0.8rem; font-size: 0.75rem;">All Leads</button>
+                <button class="cyber-btn secondary crm-filter-btn" data-filter="new" style="padding: 0.4rem 0.8rem; font-size: 0.75rem;">🟡 New</button>
+                <button class="cyber-btn secondary crm-filter-btn" data-filter="discussion" style="padding: 0.4rem 0.8rem; font-size: 0.75rem;">🔵 In Discussion</button>
+                <button class="cyber-btn secondary crm-filter-btn" data-filter="quoted" style="padding: 0.4rem 0.8rem; font-size: 0.75rem;">🟣 Quoted</button>
+                <button class="cyber-btn secondary crm-filter-btn" data-filter="closed" style="padding: 0.4rem 0.8rem; font-size: 0.75rem;">🟢 Closed / Won</button>
+              </div>
+
+              <div style="display: flex; gap: 0.6rem;">
+                <button id="crm-add-sample-btn" class="cyber-btn secondary" style="padding: 0.4rem 0.8rem; font-size: 0.75rem;">
+                  <i data-lucide="plus" style="width: 12px; height: 12px;"></i>
+                  <span>Add Sample Lead</span>
+                </button>
+                <button id="crm-export-csv-btn" class="cyber-btn" style="padding: 0.4rem 0.8rem; font-size: 0.75rem;">
+                  <i data-lucide="download" style="width: 12px; height: 12px;"></i>
+                  <span>Export CSV</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Inquiries Table -->
+            <div class="admin-table-wrapper">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Client & Date</th>
+                    <th>Contact Channels</th>
+                    <th>Category & Scope</th>
+                    <th>Message Brief</th>
+                    <th>Lead Status</th>
+                    <th>Quick Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="admin-inquiries-table-body">
+                  <!-- Dynamically populated -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Tab 5: Profile & Global Site Settings -->
+          <div class="admin-tab-pane" id="admin-tab-settings">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;">
+              
+              <!-- 1. Profile Bio & Global Text -->
+              <div class="glass-card" style="padding: 1.5rem;">
+                <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem;">
+                  <i data-lucide="user" style="color: var(--accent-primary); width: 18px; height: 18px;"></i>
+                  Profile & Global Bio Settings
+                </h4>
+
+                <form id="admin-settings-form">
+                  <div class="form-group" style="margin-bottom: 0.8rem;">
+                    <label class="form-label" style="font-size: 0.75rem;">Hero Headline Name</label>
+                    <input type="text" id="settings-hero-headline" class="form-input" placeholder="MD BIPLOB" />
+                  </div>
+
+                  <div class="form-group" style="margin-bottom: 0.8rem;">
+                    <label class="form-label" style="font-size: 0.75rem;">Hero Tagline / Subheadline</label>
+                    <input type="text" id="settings-hero-subheadline" class="form-input" placeholder="Custom T-Shirt Artist // Vector Designer // POD Specialist" />
+                  </div>
+
+                  <div class="form-group" style="margin-bottom: 0.8rem;">
+                    <label class="form-label" style="font-size: 0.75rem;">Hero Bio Paragraph</label>
+                    <textarea id="settings-hero-bio" class="form-textarea" style="min-height: 70px;"></textarea>
+                  </div>
+
+                  <div class="form-row" style="margin-bottom: 0.8rem;">
+                    <div class="form-group">
+                      <label class="form-label" style="font-size: 0.75rem;">Resume Download Link</label>
+                      <input type="url" id="settings-resume-link" class="form-input" placeholder="https://www.linkedin.com/in/biplob-art/" />
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" style="font-size: 0.75rem;">Contact Email</label>
+                      <input type="email" id="settings-contact-email" class="form-input" placeholder="md.biplob.art@gmail.com" />
+                    </div>
+                  </div>
+
+                  <div class="form-group" style="margin-bottom: 1rem;">
+                    <label class="form-label" style="font-size: 0.75rem;">WhatsApp Number (with country code)</label>
+                    <input type="text" id="settings-whatsapp-phone" class="form-input" placeholder="+8801340276600" />
+                  </div>
+
+                  <!-- Broadcast Banner -->
+                  <div style="border-top: 1px solid var(--border-glass); padding-top: 1rem; margin-top: 1rem;">
+                    <div style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.6rem;">
+                      <input type="checkbox" id="settings-banner-toggle" style="width: 18px; height: 18px; cursor: pointer;" checked />
+                      <label for="settings-banner-toggle" style="font-size: 0.85rem; font-weight: 600; cursor: pointer;">Enable Top Announcement Ticker</label>
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 1rem;">
+                      <label class="form-label" style="font-size: 0.75rem;">Announcement Broadcast Text</label>
+                      <textarea id="settings-banner-text" class="form-textarea" style="min-height: 55px;"></textarea>
+                    </div>
+                  </div>
+
+                  <!-- Accent Color & 3D Particles -->
+                  <div class="form-row" style="margin-bottom: 1.2rem;">
+                    <div class="form-group">
+                      <label class="form-label" style="font-size: 0.75rem;">Custom Neon Accent</label>
+                      <input type="color" id="settings-accent-color" value="#00f3ff" style="width: 100%; height: 38px; border: 1px solid var(--border-glass); border-radius: 6px; background: none; cursor: pointer;" />
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" style="font-size: 0.75rem;">3D Particle Density</label>
+                      <select id="settings-particles-select" class="form-select">
+                        <option value="6000">6,000 Pts (Battery Saver)</option>
+                        <option value="12000" selected>12,000 Pts (Balanced)</option>
+                        <option value="20000">20,000 Pts (Cinema)</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <button type="submit" class="cyber-btn" style="width: 100%; justify-content: center;">
+                    <i data-lucide="save" style="width: 14px; height: 14px;"></i>
+                    <span>APPLY GLOBAL PROFILE SETTINGS</span>
+                  </button>
+                </form>
+              </div>
+
+              <!-- 2. Database Backup, Restore & Reset -->
+              <div class="glass-card" style="padding: 1.5rem;">
+                <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem;">
+                  <i data-lucide="hard-drive" style="color: #00ff88; width: 18px; height: 18px;"></i>
+                  Database Backup & Restoration
+                </h4>
+                <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 1.2rem;">
+                  Full 1-click JSON backup of all portfolio projects, skills, certifications, CRM messages, and custom configurations.
+                </p>
+
+                <div style="display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 1.5rem;">
+                  <button id="admin-export-backup-btn" class="cyber-btn" style="justify-content: center;">
+                    <i data-lucide="download-cloud" style="width: 15px; height: 15px;"></i>
+                    <span>Export Full System Backup (JSON)</span>
+                  </button>
+
+                  <label class="cyber-btn secondary" style="justify-content: center; cursor: pointer; text-align: center;">
+                    <i data-lucide="upload-cloud" style="width: 15px; height: 15px;"></i>
+                    <span>Restore From Backup File</span>
+                    <input type="file" id="admin-restore-file-input" accept=".json" style="display: none;" />
+                  </label>
+                </div>
+
+                <div style="border-top: 1px solid var(--border-glass); padding-top: 1.2rem;">
+                  <h5 style="font-size: 0.9rem; font-weight: 700; color: #ff007f; margin-bottom: 0.5rem;">Factory Reset</h5>
+                  <p style="color: var(--text-muted); font-size: 0.78rem; margin-bottom: 0.8rem;">
+                    Revert all custom case studies, skills, CRM logs, and settings back to factory defaults.
+                  </p>
+                  <button id="admin-reset-defaults-btn" class="cyber-btn secondary" style="border-color: #ff007f; color: #ff007f; width: 100%; justify-content: center;">
+                    <i data-lucide="refresh-cw" style="width: 14px; height: 14px;"></i>
+                    <span>Reset All to Factory Defaults</span>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>
