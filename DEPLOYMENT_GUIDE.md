@@ -1,30 +1,30 @@
-# 🚀 Deployment Guide: GitHub & Netlify
+# 🚀 Production Deployment & Security Guide: GitHub & Netlify
 
-This repository is fully configured for **continuous deployment (CI/CD)** on **GitHub** and **Netlify**.
+This repository is fully configured for **continuous deployment (CI/CD)** on **GitHub** and **Netlify** with serverless backend functions and Firebase Firestore CRM integration.
 
 ---
 
 ## 1. Connect and Push to GitHub
 
-If you have Git installed on your machine, run these commands in your project terminal:
+To push this repository to GitHub:
 
 ```bash
-# 1. Initialize Git repository
+# 1. Initialize Git repository (if not already done)
 git init
 
 # 2. Add all project files
 git add .
 
-# 3. Create your first commit
-git commit -m "feat: MD Biplob 3D WebGL Portfolio with Admin Control Hub & Firebase CRM"
+# 3. Create your commit
+git commit -m "feat: MD Biplob 3D WebGL Portfolio with Serverless Security & Cloud CRM"
 
-# 4. Rename default branch to main
+# 4. Set main branch
 git branch -M main
 
-# 5. Link your remote GitHub repository (replace with your GitHub repo URL)
-git remote add origin https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME.git
+# 5. Link remote GitHub repository
+git remote add origin https://github.com/bb6446/Protofilo.git
 
-# 6. Push code to GitHub
+# 6. Push code
 git push -u origin main
 ```
 
@@ -32,41 +32,78 @@ git push -u origin main
 
 ## 2. Deploy to Netlify (Recommended)
 
-### Option A: Automatic Deployment via GitHub (Continuous CI/CD)
+### Automatic Deployment via GitHub (Continuous CI/CD)
 1. Log in to [Netlify](https://app.netlify.com/).
 2. Click **"Add new site"** > **"Import an existing project"**.
-3. Select **GitHub** and authorize your account.
-4. Choose this repository (`MD_BIPLOB_3D_Portfolio_Website`).
-5. Netlify will auto-detect the configuration from `netlify.toml`:
+3. Select **GitHub** and choose `MD_BIPLOB_3D_Portfolio_Website`.
+4. Netlify will auto-detect settings from `netlify.toml`:
    - **Build Command**: `npm run build`
    - **Publish Directory**: `dist`
-6. (Optional) Under **Site configuration > Environment Variables**, add your Firebase keys:
-   - `VITE_FIREBASE_API_KEY`
-   - `VITE_FIREBASE_PROJECT_ID`
-   - `VITE_FIREBASE_AUTH_DOMAIN`
-   - `VITE_FIREBASE_STORAGE_BUCKET`
-7. Click **"Deploy Site"**. Your site is now live!
-8. Netlify handles the `/admin` and SPA routing automatically via `public/_redirects`.
+   - **Functions Directory**: `netlify/functions`
+5. Configure Environment Variables under **Site configuration > Environment Variables**:
 
-### Option B: Netlify CLI Manual Deploy
-```bash
-npx netlify-cli deploy --prod --dir=dist
+| Variable | Description | Default / Example |
+|---|---|---|
+| `VITE_FIREBASE_API_KEY` | Firebase Web API Key | (Your Firebase Key) |
+| `VITE_FIREBASE_PROJECT_ID` | Firebase Project ID | `biplob-art` |
+| `VITE_ADMIN_PIN` | Admin Master Passcode (Client build fallback) | Custom PIN |
+| `VITE_ADMIN_PIN_HASH` | SHA-256 Hash of Admin Passcode | (Precalculated SHA-256) |
+| `VITE_ADMIN_EMAIL` | Whitelisted Admin Google Email | `talukderbiplob498@gmail.com` |
+| `ADMIN_PIN_HASH` | Serverless Function Passcode Hash | (For Netlify Functions) |
+| `SESSION_SECRET` | HMAC Token Secret Key | 32+ char random string |
+
+6. Click **"Deploy Site"**.
+
+---
+
+## 3. Serverless Backend Functions
+
+The repository includes serverless Netlify Functions under `netlify/functions/`:
+- `submit-inquiry.js`: Provides server-side email validation, input sanitization, IP-based rate limiting (5 inquiries/min), and Firestore persistence.
+- `admin-auth.js`: Verifies admin authentication using constant-time hash comparison and issues signed HMAC session tokens.
+
+---
+
+## 4. Firestore Security Rules
+
+To secure your Cloud Firestore database in production, apply these rules in the [Firebase Console](https://console.firebase.google.com/):
+
+```javascript
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Public contact inquiries: Anyone can create; only authenticated admin can read/update
+    match /messages/{messageId} {
+      allow create: if request.resource.data.keys().hasAll(['senderName', 'senderEmail', 'projectType'])
+                    && request.resource.data.senderName is string
+                    && request.resource.data.senderEmail is string;
+      allow read, update, delete: if request.auth != null;
+    }
+    
+    // Portfolio projects, skills, settings: Public read; authenticated admin write
+    match /projects/{projectId} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+    
+    match /skills/{skillId} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+    
+    match /settings/{settingId} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+  }
+}
 ```
 
 ---
 
-## 3. GitHub Pages Deployment (Free Alternative)
+## 5. Admin Access
 
-The repository includes a ready-to-use GitHub Actions workflow at `.github/workflows/deploy.yml`.
-
-1. Go to your GitHub repository on github.com.
-2. Navigate to **Settings** > **Pages**.
-3. Under **Build and deployment > Source**, select **GitHub Actions**.
-4. Every time you push to `main`, GitHub Actions will build and deploy your site automatically!
-
----
-
-## 4. Admin Access & Authentication
-- **Admin URL**: `https://your-domain.netlify.app/#admin` or click **`ADMIN PORTAL`** in the footer.
-- **Google Sign-In Account**: `talukderbiplob498@gmail.com`
-- **Master Passcode PIN**: `2026`
+- **Admin Portal URL**: `https://your-domain.netlify.app/#admin` or click **`ADMIN PORTAL`** in the footer.
+- **Google Sign-In**: Whitelisted to the authorized owner email configured in `VITE_ADMIN_EMAIL`.
+- **Passcode Authentication**: Validated against serverless hash verification or environment passcode.

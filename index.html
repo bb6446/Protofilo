@@ -79,6 +79,16 @@
   }
   </script>
 
+  <!-- Favicon / Browser URL Tab Logo (BA - BIPLOB ART) -->
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <link rel="icon" type="image/png" sizes="64x64" href="./favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+  <link rel="shortcut icon" href="./favicon.png" />
+
+  <!-- Web App Manifest & Sitemap -->
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="./sitemap.xml" />
+
   <!-- Google Fonts: Space Grotesk & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -149,14 +159,15 @@
   <!-- Global Announcement Ticker / Banner (Admin Controlled) -->
   <div class="announcement-bar" id="global-announcement-bar">
     <span class="announcement-pulse"></span>
-    <span id="announcement-bar-text">🔥 NOW ACCEPTING NEW CUSTOM APPAREL & STREETWEAR COMMISSIONS FOR 2026 // FAST TURNAROUND</span>
+    <span id="announcement-bar-text">🔥 NOW ACCEPTING NEW CUSTOM APPAREL & STREETWEAR COMMISSIONS FOR 2026 // FAST
+      TURNAROUND</span>
   </div>
 
   <!-- Header Navigation -->
   <header class="main-header">
     <a href="#hero" class="brand-logo">
-      <div class="logo-icon">
-        <i data-lucide="palette" style="width: 18px; height: 18px; color: #000;"></i>
+      <div class="logo-avatar-frame">
+        <img src="./images/biplob.webp" alt="MD Biplob" class="nav-avatar-img" />
       </div>
       <span>MD <span class="neon-text">BIPLOB</span></span>
     </a>
@@ -172,21 +183,20 @@
       <li><a href="#contact" class="nav-link">Contact</a></li>
       <li class="mobile-only-direct" style="width: 100%;">
         <div class="mobile-direct-box">
-          <a href="https://wa.me/8801340276600?text=Hi%20Biplob,%20I'd%20like%20to%20discuss%20a%20design%20project!" 
-             target="_blank" 
-             class="cyber-btn whatsapp-btn" 
-             style="width: 100%; justify-content: center; padding: 0.75rem 1rem;">
+          <a href="https://wa.me/8801340276600?text=Hi%20Biplob,%20I'd%20like%20to%20discuss%20a%20design%20project!"
+            target="_blank" class="cyber-btn whatsapp-btn"
+            style="width: 100%; justify-content: center; padding: 0.75rem 1rem;">
             <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.17-.48-.29z"/>
+              <path
+                d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.17-.48-.29z" />
             </svg>
             <span>Message WhatsApp</span>
           </a>
-          <a href="https://t.me/biplob_art" 
-             target="_blank" 
-             class="cyber-btn telegram-btn" 
-             style="width: 100%; justify-content: center; padding: 0.75rem 1rem;">
+          <a href="https://t.me/biplob_art" target="_blank" class="cyber-btn telegram-btn"
+            style="width: 100%; justify-content: center; padding: 0.75rem 1rem;">
             <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z" />
             </svg>
             <span>Message Telegram</span>
           </a>
@@ -198,23 +208,21 @@
       <!-- Direct Messaging Channels (WhatsApp & Telegram) -->
       <div class="header-direct-badge">
         <!-- WhatsApp Direct -->
-        <a href="https://wa.me/8801340276600?text=Hi%20Biplob,%20I'd%20like%20to%20discuss%20a%20design%20project!" 
-           target="_blank" 
-           class="direct-msg-pill whatsapp"
-           title="Direct Message on WhatsApp (+8801340276600)">
+        <a href="https://wa.me/8801340276600?text=Hi%20Biplob,%20I'd%20like%20to%20discuss%20a%20design%20project!"
+          target="_blank" class="direct-msg-pill whatsapp" title="Direct Message on WhatsApp (+8801340276600)">
           <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor">
-            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.17-.48-.29z"/>
+            <path
+              d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.17-.48-.29z" />
           </svg>
           <span class="direct-label">WhatsApp</span>
         </a>
 
         <!-- Telegram Direct -->
-        <a href="https://t.me/biplob_art" 
-           target="_blank" 
-           class="direct-msg-pill telegram"
-           title="Direct Message on Telegram (@biplob_art)">
+        <a href="https://t.me/biplob_art" target="_blank" class="direct-msg-pill telegram"
+          title="Direct Message on Telegram (@biplob_art)">
           <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z" />
           </svg>
           <span class="direct-label">Telegram</span>
         </a>
@@ -247,8 +255,8 @@
         <i data-lucide="menu"></i>
       </button>
 
-      <a href="https://wa.me/8801340276600?text=Hi%20Biplob,%20I'd%20like%20to%20discuss%20a%20design%20project!" target="_blank" class="cyber-btn hire-nav-btn"
-        style="padding: 0.55rem 1.2rem; font-size: 0.82rem;">
+      <a href="https://wa.me/8801340276600?text=Hi%20Biplob,%20I'd%20like%20to%20discuss%20a%20design%20project!"
+        target="_blank" class="cyber-btn hire-nav-btn" style="padding: 0.55rem 1.2rem; font-size: 0.82rem;">
         <i data-lucide="message-square" style="width: 14px; height: 14px;"></i>
         <span>HIRE ME</span>
       </a>
@@ -318,6 +326,30 @@
               </div>
             </div>
           </div>
+
+          <!-- Hero Visual: Holographic Designer Portrait -->
+          <div class="hero-visual reveal-card">
+            <div class="hero-avatar-card">
+              <div class="hero-avatar-glow"></div>
+              <div class="hero-avatar-frame">
+                <img src="./images/biplob.webp" alt="MD Biplob — Apparel Designer & Vector Artist"
+                  class="hero-avatar-photo" />
+                <div class="hero-avatar-scanner"></div>
+                <div class="avatar-corner-tl"></div>
+                <div class="avatar-corner-tr"></div>
+                <div class="avatar-corner-bl"></div>
+                <div class="avatar-corner-br"></div>
+              </div>
+              <div class="hero-avatar-meta">
+                <div class="avatar-status-pill">
+                  <span class="pulse-dot"></span>
+                  <span>AVAILABLE FOR FREELANCE & POD</span>
+                </div>
+                <div class="avatar-title-tag">MD BIPLOB</div>
+                <div class="avatar-sub-tag">Senior T-Shirt Artist // Fabrilife & Street ThreadX</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -337,11 +369,19 @@
         <div class="about-grid">
           <!-- Biography Card -->
           <div class="glass-card reveal-card">
-            <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">
-              <i data-lucide="user"
-                style="vertical-align: middle; color: var(--accent-primary); margin-right: 8px;"></i>
-              Profile Statement
-            </h3>
+            <div class="profile-header-flex">
+              <div class="profile-avatar-wrapper">
+                <img src="./images/biplob.webp" alt="MD Biplob Portrait" class="profile-avatar-img" />
+                <span class="profile-avatar-badge" title="Verified Designer">✓</span>
+              </div>
+              <div>
+                <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 0.2rem;">
+                  Profile Statement
+                </h3>
+                <span class="mono" style="font-size: 0.78rem; color: var(--accent-primary);">MD BIPLOB // APPAREL
+                  SPECIALIST</span>
+              </div>
+            </div>
             <p style="color: var(--text-muted); line-height: 1.7; font-size: 1rem; margin-bottom: 1.2rem;">
               The only child of a middle-class family. I did engineering with a lot of hope and desire and am ready to
               do any work anytime. It is my nature to follow the rules and deliver excellence. I like to interact with
@@ -434,10 +474,14 @@
 
         <div class="sandbox-container">
           <!-- 3D Interactive Viewport framing -->
-          <div class="sandbox-viewport-frame reveal-card">
+          <div class="sandbox-viewport-frame reveal-card" id="studio-viewport-box">
+            <div class="avatar-corner-tl"></div>
+            <div class="avatar-corner-tr"></div>
+            <div class="avatar-corner-bl"></div>
+            <div class="avatar-corner-br"></div>
             <div class="sandbox-overlay-hint">
-              <i data-lucide="hand" style="width: 14px; height: 14px; vertical-align: middle; margin-right: 4px;"></i>
-              Click & Drag to rotate • Move mouse for parallax depth
+              <i data-lucide="hand" style="width: 14px; height: 14px; vertical-align: middle;"></i>
+              <span>Click & Drag to Rotate 3D Mockup</span>
             </div>
           </div>
 
@@ -838,7 +882,7 @@
           <!-- Design 1: Street ThreadX Collection -->
           <div class="project-card reveal-card" data-project-id="p1" data-category="streetwear pod">
             <div class="project-thumb-img-wrapper">
-              <img src="./portfolio/street-threadx-collection.png"
+              <img src="./portfolio/street-threadx-collection.webp"
                 alt="Street ThreadX Cyber Streetwear Collection by MD Biplob" class="project-img" loading="lazy" />
               <span class="project-overlay-badge">STREET THREADX</span>
               <div class="project-zoom-indicator">
@@ -864,7 +908,7 @@
           <!-- Design 2: Never Give Up Typography -->
           <div class="project-card reveal-card" data-project-id="p2" data-category="typography pod">
             <div class="project-thumb-img-wrapper">
-              <img src="./portfolio/never-give-up-typography.png"
+              <img src="./portfolio/never-give-up-typography.webp"
                 alt="Never Give Up Vector Typography T-Shirt Design by MD Biplob" class="project-img" loading="lazy" />
               <span class="project-overlay-badge">TYPOGRAPHY ART</span>
               <div class="project-zoom-indicator">
@@ -890,7 +934,7 @@
           <!-- Design 3: Peace Hand Splatter -->
           <div class="project-card reveal-card" data-project-id="p3" data-category="illustration pod">
             <div class="project-thumb-img-wrapper">
-              <img src="./portfolio/peace-hand-vector-splatter.png"
+              <img src="./portfolio/peace-hand-vector-splatter.webp"
                 alt="Vibrant Splatter Peace Hand Illustration by MD Biplob" class="project-img" loading="lazy" />
               <span class="project-overlay-badge">VECTOR ILLUSTRATION</span>
               <div class="project-zoom-indicator">
@@ -916,7 +960,7 @@
           <!-- Design 4: Focus On The Goals -->
           <div class="project-card reveal-card" data-project-id="p4" data-category="streetwear typography">
             <div class="project-thumb-img-wrapper">
-              <img src="./portfolio/focus-on-goals-streetwear.png"
+              <img src="./portfolio/focus-on-goals-streetwear.webp"
                 alt="Focus On The Goals Cyber Green Streetwear T-Shirt by MD Biplob" class="project-img"
                 loading="lazy" />
               <span class="project-overlay-badge">CYBER STREETWEAR</span>
@@ -943,7 +987,7 @@
           <!-- Design 5: Next Level 01 -->
           <div class="project-card reveal-card" data-project-id="p5" data-category="streetwear pod">
             <div class="project-thumb-img-wrapper">
-              <img src="./portfolio/next-level-cyber-tee.jpg"
+              <img src="./portfolio/next-level-cyber-tee.webp"
                 alt="Next Level Cyberpunk Techwear Graphic Tee by MD Biplob" class="project-img" loading="lazy" />
               <span class="project-overlay-badge">TECHWEAR EDITION</span>
               <div class="project-zoom-indicator">
@@ -969,7 +1013,7 @@
           <!-- Design 6: Unbeaten Denim Typography -->
           <div class="project-card reveal-card" data-project-id="p6" data-category="streetwear typography pod">
             <div class="project-thumb-img-wrapper">
-              <img src="./portfolio/unbeaten-brooklyn-denim.png"
+              <img src="./portfolio/unbeaten-brooklyn-denim.webp"
                 alt="UNBEATEN Brooklyn Superior Denim T-Shirt Design by MD Biplob" class="project-img" loading="lazy" />
               <span class="project-overlay-badge">DENIM STREETWEAR</span>
               <div class="project-zoom-indicator">
@@ -980,7 +1024,8 @@
               <span class="project-category">Streetwear & Denim Typography</span>
               <h3 class="project-title">"UNBEATEN // Brooklyn 1986" Streetwear Typography Tee</h3>
               <p class="project-desc">
-                High-impact urban apparel concept featuring stacked amber-gold and white typography, horizontal speed shadow trails, and industrial label specs engineered for commercial apparel drops.
+                High-impact urban apparel concept featuring stacked amber-gold and white typography, horizontal speed
+                shadow trails, and industrial label specs engineered for commercial apparel drops.
               </p>
               <div class="project-tags">
                 <span class="project-tag">Streetwear</span>
@@ -994,8 +1039,9 @@
           <!-- Design 7: Savage Gothic Metal Typography -->
           <div class="project-card reveal-card" data-project-id="p7" data-category="typography streetwear">
             <div class="project-thumb-img-wrapper">
-              <img src="./portfolio/savage-gothic-metal-typography.png"
-                alt="SAVAGE Heavy Metal Gothic Typography T-Shirt Design by MD Biplob" class="project-img" loading="lazy" />
+              <img src="./portfolio/savage-gothic-metal-typography.webp"
+                alt="SAVAGE Heavy Metal Gothic Typography T-Shirt Design by MD Biplob" class="project-img"
+                loading="lazy" />
               <span class="project-overlay-badge">GOTHIC METALWEAR</span>
               <div class="project-zoom-indicator">
                 <i data-lucide="maximize-2" style="width: 18px; height: 18px;"></i>
@@ -1005,7 +1051,8 @@
               <span class="project-category">Gothic Lettering & Metalwear</span>
               <h3 class="project-title">"SAVAGE" Heavy Metal Gothic Lettering & Metalwear</h3>
               <p class="project-desc">
-                Aggressive blackletter typography crafted with sharp spiky thorn flourishes, chrome-metallic bevel shading, and distressed weathering tailored for underground rock & gothic merchandise.
+                Aggressive blackletter typography crafted with sharp spiky thorn flourishes, chrome-metallic bevel
+                shading, and distressed weathering tailored for underground rock & gothic merchandise.
               </p>
               <div class="project-tags">
                 <span class="project-tag">Gothic Metal</span>
@@ -1019,8 +1066,9 @@
           <!-- Design 8: Never Look Back Grunge Brush Typography -->
           <div class="project-card reveal-card" data-project-id="p8" data-category="streetwear typography pod">
             <div class="project-thumb-img-wrapper">
-              <img src="./portfolio/never-look-back-grunge-apparel.png"
-                alt="Never Look Back Urban Grunge Brush Typography T-Shirt Design by MD Biplob" class="project-img" loading="lazy" />
+              <img src="./portfolio/never-look-back-grunge-apparel.webp"
+                alt="Never Look Back Urban Grunge Brush Typography T-Shirt Design by MD Biplob" class="project-img"
+                loading="lazy" />
               <span class="project-overlay-badge">URBAN GRUNGE</span>
               <div class="project-zoom-indicator">
                 <i data-lucide="maximize-2" style="width: 18px; height: 18px;"></i>
@@ -1030,7 +1078,8 @@
               <span class="project-category">Urban Grunge & Brush Art</span>
               <h3 class="project-title">"NEVER LOOK BACK — Brooklyn NYC" Grunge Brush Typography</h3>
               <p class="project-desc">
-                Raw, dynamic calligraphic brush-stroke typography enclosed within a vivid neon crimson geometric bounding frame with distressed splatter textures for street culture apparel lines.
+                Raw, dynamic calligraphic brush-stroke typography enclosed within a vivid neon crimson geometric
+                bounding frame with distressed splatter textures for street culture apparel lines.
               </p>
               <div class="project-tags">
                 <span class="project-tag">Brush Typography</span>
@@ -1044,8 +1093,9 @@
           <!-- Design 9: Break The Rules Cyber Techwear Graphic -->
           <div class="project-card reveal-card" data-project-id="p9" data-category="streetwear pod typography">
             <div class="project-thumb-img-wrapper">
-              <img src="./portfolio/break-the-rules-techwear.png"
-                alt="Break The Rules NYC Sport System Techwear T-Shirt Design by MD Biplob" class="project-img" loading="lazy" />
+              <img src="./portfolio/break-the-rules-techwear.webp"
+                alt="Break The Rules NYC Sport System Techwear T-Shirt Design by MD Biplob" class="project-img"
+                loading="lazy" />
               <span class="project-overlay-badge">CYBER TECHWEAR</span>
               <div class="project-zoom-indicator">
                 <i data-lucide="maximize-2" style="width: 18px; height: 18px;"></i>
@@ -1055,7 +1105,8 @@
               <span class="project-category">Cyber Techwear & Sports Apparel</span>
               <h3 class="project-title">"BREAK THE RULES // NYC Sport System" Techwear Graphic Tee</h3>
               <p class="project-desc">
-                Modern cyber athletic techwear graphic combining bold vertical typography, segmented canary yellow accent blocks, diagonal coordinate grids, and technical sportswear specs.
+                Modern cyber athletic techwear graphic combining bold vertical typography, segmented canary yellow
+                accent blocks, diagonal coordinate grids, and technical sportswear specs.
               </p>
               <div class="project-tags">
                 <span class="project-tag">Techwear</span>
@@ -1069,8 +1120,9 @@
           <!-- Design 10: Beach Please Retro Tropical Sunglasses Vector Art -->
           <div class="project-card reveal-card" data-project-id="p10" data-category="illustration pod">
             <div class="project-thumb-img-wrapper">
-              <img src="./portfolio/beach-please-summer-apparel.png"
-                alt="Beach Please Retro Tropical Sunglasses Vector Art T-Shirt Design by MD Biplob" class="project-img" loading="lazy" />
+              <img src="./portfolio/beach-please-summer-apparel.webp"
+                alt="Beach Please Retro Tropical Sunglasses Vector Art T-Shirt Design by MD Biplob" class="project-img"
+                loading="lazy" />
               <span class="project-overlay-badge">SUMMER VECTOR ART</span>
               <div class="project-zoom-indicator">
                 <i data-lucide="maximize-2" style="width: 18px; height: 18px;"></i>
@@ -1080,7 +1132,8 @@
               <span class="project-category">Vector Illustration & Summer Apparel</span>
               <h3 class="project-title">"BEACH PLEASE" Retro Tropical Sunglasses Vector Art</h3>
               <p class="project-desc">
-                Vibrant summer resort apparel artwork featuring classic sunglasses reflecting a sun-drenched tropical ocean landscape, coastal palms, and golden sunset paired with playful script typography.
+                Vibrant summer resort apparel artwork featuring classic sunglasses reflecting a sun-drenched tropical
+                ocean landscape, coastal palms, and golden sunset paired with playful script typography.
               </p>
               <div class="project-tags">
                 <span class="project-tag">Summer Art</span>
@@ -1148,11 +1201,25 @@
         <div class="contact-grid">
           <!-- Direct Contact Information -->
           <div class="glass-card reveal-card">
-            <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.2rem;">
+            <div class="profile-header-flex"
+              style="margin-bottom: 1.5rem; padding-bottom: 1.2rem; border-bottom: 1px solid var(--border-glass);">
+              <div class="profile-avatar-wrapper" style="width: 58px; height: 58px;">
+                <img src="./images/biplob.webp" alt="MD Biplob Portrait" class="profile-avatar-img" />
+                <span class="profile-avatar-badge" title="Online & Available">●</span>
+              </div>
+              <div>
+                <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 0.15rem;">
+                  MD BIPLOB
+                </h3>
+                <span class="mono" style="font-size: 0.76rem; color: #00ff88;">ONLINE • READY FOR NEW COMMISSIONS</span>
+              </div>
+            </div>
+
+            <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-main);">
               <i data-lucide="mail"
-                style="vertical-align: middle; color: var(--accent-primary); margin-right: 8px;"></i>
+                style="vertical-align: middle; color: var(--accent-primary); margin-right: 6px;"></i>
               Direct Channels & Socials
-            </h3>
+            </h4>
 
             <!-- LinkedIn -->
             <a href="https://www.linkedin.com/in/biplob-art/" target="_blank" class="contact-card-item">
@@ -1401,7 +1468,7 @@
        ========================================================================== -->
   <div class="admin-modal-backdrop" id="admin-modal">
     <div class="admin-modal-content">
-      
+
       <!-- Top Header Bar -->
       <div class="admin-header-bar">
         <div class="admin-identity">
@@ -1409,7 +1476,8 @@
             <i data-lucide="terminal" style="width: 16px; height: 16px; color: #000;"></i>
           </div>
           <div>
-            <div style="font-weight: 800; font-size: 1rem; letter-spacing: 1px; color: #fff; display: flex; align-items: center; gap: 0.5rem;">
+            <div
+              style="font-weight: 800; font-size: 1rem; letter-spacing: 1px; color: #fff; display: flex; align-items: center; gap: 0.5rem;">
               <span>ADMIN <span class="neon-text">CONTROL HUB</span></span>
               <span id="admin-active-user-badge" class="admin-user-pill">
                 <i data-lucide="shield-check" style="width: 12px; height: 12px; color: #00ff88;"></i>
@@ -1427,7 +1495,8 @@
           <button class="icon-btn" id="admin-lock-btn" title="Lock / Logout Admin" style="width: 32px; height: 32px;">
             <i data-lucide="lock" style="width: 14px; height: 14px; color: #ffaa00;"></i>
           </button>
-          <button class="modal-close" id="admin-modal-close" style="position: static; font-size: 1.4rem;" title="Close Window">&times;</button>
+          <button class="modal-close" id="admin-modal-close" style="position: static; font-size: 1.4rem;"
+            title="Close Window">&times;</button>
         </div>
       </div>
 
@@ -1442,12 +1511,17 @@
         </p>
 
         <!-- Google OAuth Sign In Button -->
-        <button id="google-signin-btn" class="google-auth-btn" type="button" title="Sign In with Authorized Google Account">
+        <button id="google-signin-btn" class="google-auth-btn" type="button"
+          title="Sign In with Authorized Google Account">
           <svg class="google-svg-icon" viewBox="0 0 24 24" width="22" height="22">
-            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
-            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+            <path fill="#4285F4"
+              d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+            <path fill="#34A853"
+              d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+            <path fill="#FBBC05"
+              d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
+            <path fill="#EA4335"
+              d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
           </svg>
           <div style="text-align: left; line-height: 1.25;">
             <div style="font-weight: 700; font-size: 0.94rem; color: #111827;">Sign in with Google</div>
@@ -1461,22 +1535,20 @@
         </div>
 
         <form id="admin-pin-form">
-          <input type="password" id="admin-pin-input" class="admin-pin-field" placeholder="••••" maxlength="12" autocomplete="off" autofocus />
-          <div id="admin-pin-error" style="color: #ff007f; font-size: 0.8rem; margin-bottom: 1rem; display: none;"></div>
+          <input type="password" id="admin-pin-input" class="admin-pin-field" placeholder="••••" maxlength="12"
+            autocomplete="off" autofocus />
+          <div id="admin-pin-error" style="color: #ff007f; font-size: 0.8rem; margin-bottom: 1rem; display: none;">
+          </div>
           <button type="submit" class="cyber-btn" style="width: 100%; justify-content: center; padding: 0.85rem;">
             <i data-lucide="key" style="width: 16px; height: 16px;"></i>
             <span>UNLOCK WITH PASSCODE</span>
           </button>
         </form>
-
-        <button id="admin-autopay-btn" class="mono" style="background: none; border: none; color: var(--accent-primary); font-size: 0.76rem; margin-top: 1.2rem; cursor: pointer; text-decoration: underline;">
-          ⚡ Quick Passcode Unlock (2026)
-        </button>
       </div>
 
       <!-- 2. Main Dashboard (Shown when unlocked) -->
       <div id="admin-dashboard-section" style="display: none; flex-direction: column; flex: 1; overflow: hidden;">
-        
+
         <!-- Navigation Tabs -->
         <div class="admin-tabs-nav">
           <button class="admin-nav-tab active" data-tab="overview">
@@ -1494,7 +1566,8 @@
           <button class="admin-nav-tab" data-tab="crm">
             <i data-lucide="message-square" style="width: 15px; height: 15px;"></i>
             <span>Message Center</span>
-            <span id="admin-inquiry-badge" class="admin-badge-pill" style="padding: 0.1rem 0.4rem; font-size: 0.65rem; background: #ff007f; color: #fff; border-color: #ff007f;">0</span>
+            <span id="admin-inquiry-badge" class="admin-badge-pill"
+              style="padding: 0.1rem 0.4rem; font-size: 0.65rem; background: #ff007f; color: #fff; border-color: #ff007f;">0</span>
           </button>
           <button class="admin-nav-tab" data-tab="settings">
             <i data-lucide="user-cog" style="width: 15px; height: 15px;"></i>
@@ -1504,7 +1577,7 @@
 
         <!-- Tab Panes Content -->
         <div class="admin-tab-body">
-          
+
           <!-- Tab 1: Overview & Analytics -->
           <div class="admin-tab-pane active" id="admin-tab-overview">
             <div class="admin-stat-grid">
@@ -1523,7 +1596,8 @@
                   <i data-lucide="eye" style="color: #00f3ff; width: 20px; height: 20px;"></i>
                 </div>
                 <div class="admin-stat-val" id="stat-total-views">2,850</div>
-                <p class="mono" style="font-size: 0.72rem; color: var(--accent-primary); margin-top: 4px;">Live Portfolio Traffic</p>
+                <p class="mono" style="font-size: 0.72rem; color: var(--accent-primary); margin-top: 4px;">Live
+                  Portfolio Traffic</p>
               </div>
 
               <div class="admin-stat-card">
@@ -1532,7 +1606,8 @@
                   <i data-lucide="mail-warning" style="color: #ff007f; width: 20px; height: 20px;"></i>
                 </div>
                 <div class="admin-stat-val" id="stat-unread-messages" style="color: #ff007f;">0</div>
-                <p class="mono" style="font-size: 0.72rem; color: var(--text-muted); margin-top: 4px;">Inquiry Inbox Leads</p>
+                <p class="mono" style="font-size: 0.72rem; color: var(--text-muted); margin-top: 4px;">Inquiry Inbox
+                  Leads</p>
               </div>
 
               <div class="admin-stat-card">
@@ -1550,7 +1625,8 @@
                   <i data-lucide="inbox" style="color: #00ff88; width: 20px; height: 20px;"></i>
                 </div>
                 <div class="admin-stat-val" id="stat-total-inquiries">0</div>
-                <p class="mono" style="font-size: 0.72rem; color: var(--text-muted); margin-top: 4px;">CRM Leads Logged</p>
+                <p class="mono" style="font-size: 0.72rem; color: var(--text-muted); margin-top: 4px;">CRM Leads Logged
+                </p>
               </div>
 
               <div class="admin-stat-card">
@@ -1558,8 +1634,10 @@
                   <span class="admin-stat-label">Database Sync</span>
                   <i data-lucide="database" style="color: #00ff88; width: 20px; height: 20px;"></i>
                 </div>
-                <div class="admin-stat-val" style="font-size: 1rem; color: #00ff88; margin-top: 6px;" id="stat-db-status">ONLINE (FIRESTORE)</div>
-                <p class="mono" style="font-size: 0.72rem; color: var(--text-muted); margin-top: 4px;">NoSQL Cloud + Local Cache</p>
+                <div class="admin-stat-val" style="font-size: 1rem; color: #00ff88; margin-top: 6px;"
+                  id="stat-db-status">ONLINE (FIRESTORE)</div>
+                <p class="mono" style="font-size: 0.72rem; color: var(--text-muted); margin-top: 4px;">NoSQL Cloud +
+                  Local Cache</p>
               </div>
             </div>
 
@@ -1567,19 +1645,23 @@
             <div class="glass-card" style="padding: 1.5rem; margin-bottom: 1.5rem;">
               <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.8rem;">⚡ Quick Command Shortcuts</h4>
               <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
-                <button class="cyber-btn" onclick="document.querySelector('.admin-nav-tab[data-tab=\'projects\']').click();">
+                <button class="cyber-btn"
+                  onclick="document.querySelector('.admin-nav-tab[data-tab=\'projects\']').click();">
                   <i data-lucide="plus-circle" style="width: 15px; height: 15px;"></i>
                   <span>Add Case Study</span>
                 </button>
-                <button class="cyber-btn secondary" onclick="document.querySelector('.admin-nav-tab[data-tab=\'skills\']').click();">
+                <button class="cyber-btn secondary"
+                  onclick="document.querySelector('.admin-nav-tab[data-tab=\'skills\']').click();">
                   <i data-lucide="award" style="width: 15px; height: 15px;"></i>
                   <span>Manage Skills & Certs</span>
                 </button>
-                <button class="cyber-btn secondary" onclick="document.querySelector('.admin-nav-tab[data-tab=\'crm\']').click();">
+                <button class="cyber-btn secondary"
+                  onclick="document.querySelector('.admin-nav-tab[data-tab=\'crm\']').click();">
                   <i data-lucide="message-square" style="width: 15px; height: 15px;"></i>
                   <span>Review Inquiries</span>
                 </button>
-                <button class="cyber-btn secondary" onclick="document.querySelector('.admin-nav-tab[data-tab=\'settings\']').click();">
+                <button class="cyber-btn secondary"
+                  onclick="document.querySelector('.admin-nav-tab[data-tab=\'settings\']').click();">
                   <i data-lucide="user-cog" style="width: 15px; height: 15px;"></i>
                   <span>Edit Profile & Bio</span>
                 </button>
@@ -1590,25 +1672,28 @@
           <!-- Tab 2: Project Manager -->
           <div class="admin-tab-pane" id="admin-tab-projects">
             <div class="admin-projects-grid-layout">
-              
+
               <!-- Form: Add or Edit Project -->
               <div class="glass-card" style="padding: 1.5rem;">
-                <h4 id="admin-project-form-heading" style="font-size: 1.15rem; font-weight: 800; margin-bottom: 1rem; color: var(--accent-primary);">
+                <h4 id="admin-project-form-heading"
+                  style="font-size: 1.15rem; font-weight: 800; margin-bottom: 1rem; color: var(--accent-primary);">
                   ➕ Add New Portfolio Case Study
                 </h4>
 
                 <form id="admin-project-form">
                   <input type="hidden" id="proj-form-id" />
-                  
+
                   <div class="form-group" style="margin-bottom: 0.8rem;">
                     <label class="form-label" style="font-size: 0.75rem;">Case Study Title *</label>
-                    <input type="text" id="proj-form-title" class="form-input" placeholder="e.g. Street ThreadX — Urban Streetwear Lineup" required />
+                    <input type="text" id="proj-form-title" class="form-input"
+                      placeholder="e.g. Street ThreadX — Urban Streetwear Lineup" required />
                   </div>
 
                   <div class="form-row" style="margin-bottom: 0.8rem;">
                     <div class="form-group">
                       <label class="form-label" style="font-size: 0.75rem;">Category Name</label>
-                      <input type="text" id="proj-form-category" class="form-input" placeholder="e.g. Streetwear Campaign" />
+                      <input type="text" id="proj-form-category" class="form-input"
+                        placeholder="e.g. Streetwear Campaign" />
                     </div>
                     <div class="form-group">
                       <label class="form-label" style="font-size: 0.75rem;">Overlay Badge</label>
@@ -1628,14 +1713,16 @@
                     </div>
                     <div class="form-group">
                       <label class="form-label" style="font-size: 0.75rem;">Image URL / Canva Thumbnail</label>
-                      <input type="text" id="proj-form-image" class="form-input" placeholder="./portfolio/street-threadx-collection.png" />
+                      <input type="text" id="proj-form-image" class="form-input"
+                        placeholder="./portfolio/street-threadx-collection.png" />
                     </div>
                   </div>
 
                   <div class="form-row" style="margin-bottom: 0.8rem;">
                     <div class="form-group">
                       <label class="form-label" style="font-size: 0.75rem;">Live Behance / Store Link</label>
-                      <input type="url" id="proj-form-liveurl" class="form-input" placeholder="https://www.behance.net/biplob-art" />
+                      <input type="url" id="proj-form-liveurl" class="form-input"
+                        placeholder="https://www.behance.net/biplob-art" />
                     </div>
                     <div class="form-group">
                       <label class="form-label" style="font-size: 0.75rem;">GitHub / Repo Link</label>
@@ -1645,25 +1732,31 @@
 
                   <div class="form-group" style="margin-bottom: 0.8rem;">
                     <label class="form-label" style="font-size: 0.75rem;">Case Study Description & Print Specs</label>
-                    <textarea id="proj-form-desc" class="form-textarea" style="min-height: 70px;" placeholder="Detailed design description, apparel print techniques, and inspiration..."></textarea>
+                    <textarea id="proj-form-desc" class="form-textarea" style="min-height: 70px;"
+                      placeholder="Detailed design description, apparel print techniques, and inspiration..."></textarea>
                   </div>
 
                   <div class="form-group" style="margin-bottom: 0.8rem;">
                     <label class="form-label" style="font-size: 0.75rem;">Tech Stack & Tags (comma-separated)</label>
-                    <input type="text" id="proj-form-tags" class="form-input" placeholder="Adobe Illustrator, Screen Print, Color Separation, Tech Pack" />
+                    <input type="text" id="proj-form-tags" class="form-input"
+                      placeholder="Adobe Illustrator, Screen Print, Color Separation, Tech Pack" />
                   </div>
 
                   <div style="margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.6rem;">
-                    <input type="checkbox" id="proj-form-featured" style="width: 16px; height: 16px; cursor: pointer;" checked />
-                    <label for="proj-form-featured" style="font-size: 0.85rem; font-weight: 600; cursor: pointer;">Mark as Featured Project on Live Site</label>
+                    <input type="checkbox" id="proj-form-featured" style="width: 16px; height: 16px; cursor: pointer;"
+                      checked />
+                    <label for="proj-form-featured" style="font-size: 0.85rem; font-weight: 600; cursor: pointer;">Mark
+                      as Featured Project on Live Site</label>
                   </div>
 
                   <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
-                    <button type="submit" id="submit-project-btn" class="cyber-btn" style="flex: 1; justify-content: center;">
+                    <button type="submit" id="submit-project-btn" class="cyber-btn"
+                      style="flex: 1; justify-content: center;">
                       <i data-lucide="plus" style="width: 14px; height: 14px;"></i>
                       <span>ADD CASE STUDY TO LIVE SITE</span>
                     </button>
-                    <button type="button" id="cancel-edit-project-btn" class="cyber-btn secondary" style="display: none;">
+                    <button type="button" id="cancel-edit-project-btn" class="cyber-btn secondary"
+                      style="display: none;">
                       <span>CANCEL</span>
                     </button>
                   </div>
@@ -1686,10 +1779,11 @@
           <!-- Tab 3: Skills & Certifications Manager -->
           <div class="admin-tab-pane" id="admin-tab-skills">
             <div class="admin-projects-grid-layout">
-              
+
               <!-- Skills Management Form & List -->
               <div class="glass-card" style="padding: 1.5rem;">
-                <h4 style="font-size: 1.1rem; font-weight: 800; margin-bottom: 1rem; color: var(--accent-primary); display: flex; align-items: center; gap: 0.5rem;">
+                <h4
+                  style="font-size: 1.1rem; font-weight: 800; margin-bottom: 1rem; color: var(--accent-primary); display: flex; align-items: center; gap: 0.5rem;">
                   <i data-lucide="sliders" style="width: 18px; height: 18px;"></i>
                   Technical Skills & Proficiencies
                 </h4>
@@ -1698,7 +1792,8 @@
                   <div class="form-row" style="margin-bottom: 0.8rem;">
                     <div class="form-group">
                       <label class="form-label" style="font-size: 0.75rem;">Skill / Tool Name *</label>
-                      <input type="text" id="skill-form-name" class="form-input" placeholder="e.g. Adobe Illustrator" required />
+                      <input type="text" id="skill-form-name" class="form-input" placeholder="e.g. Adobe Illustrator"
+                        required />
                     </div>
                     <div class="form-group">
                       <label class="form-label" style="font-size: 0.75rem;">Category</label>
@@ -1715,18 +1810,22 @@
                     <div class="form-group">
                       <div style="display: flex; justify-content: space-between;">
                         <label class="form-label" style="font-size: 0.75rem;">Proficiency (1-100%)</label>
-                        <span id="skill-form-proficiency-val" class="mono" style="color: var(--accent-primary); font-size: 0.75rem;">90%</span>
+                        <span id="skill-form-proficiency-val" class="mono"
+                          style="color: var(--accent-primary); font-size: 0.75rem;">90%</span>
                       </div>
-                      <input type="range" id="skill-form-proficiency" min="10" max="100" value="90" style="width: 100%; accent-color: var(--accent-primary);" />
+                      <input type="range" id="skill-form-proficiency" min="10" max="100" value="90"
+                        style="width: 100%; accent-color: var(--accent-primary);" />
                     </div>
                     <div class="form-group">
                       <label class="form-label" style="font-size: 0.75rem;">Mastery Level Label</label>
-                      <input type="text" id="skill-form-level" class="form-input" placeholder="e.g. Master Specialist" />
+                      <input type="text" id="skill-form-level" class="form-input"
+                        placeholder="e.g. Master Specialist" />
                     </div>
                   </div>
 
                   <div style="display: flex; gap: 0.6rem;">
-                    <button type="submit" id="submit-skill-btn" class="cyber-btn" style="flex: 1; justify-content: center;">
+                    <button type="submit" id="submit-skill-btn" class="cyber-btn"
+                      style="flex: 1; justify-content: center;">
                       <i data-lucide="plus" style="width: 14px; height: 14px;"></i>
                       <span>ADD SKILL</span>
                     </button>
@@ -1743,7 +1842,8 @@
 
               <!-- Certifications & Training Programs -->
               <div class="glass-card" style="padding: 1.5rem;">
-                <h4 style="font-size: 1.1rem; font-weight: 800; margin-bottom: 1rem; color: #00ff88; display: flex; align-items: center; gap: 0.5rem;">
+                <h4
+                  style="font-size: 1.1rem; font-weight: 800; margin-bottom: 1rem; color: #00ff88; display: flex; align-items: center; gap: 0.5rem;">
                   <i data-lucide="award" style="width: 18px; height: 18px;"></i>
                   Certifications & Bootcamps
                 </h4>
@@ -1751,7 +1851,8 @@
                 <form id="admin-cert-form" style="margin-bottom: 1.5rem;">
                   <div class="form-group" style="margin-bottom: 0.8rem;">
                     <label class="form-label" style="font-size: 0.75rem;">Certification / Program Title *</label>
-                    <input type="text" id="cert-form-title" class="form-input" placeholder="e.g. Advanced Vector Illustration & Masterclass" required />
+                    <input type="text" id="cert-form-title" class="form-input"
+                      placeholder="e.g. Advanced Vector Illustration & Masterclass" required />
                   </div>
 
                   <div class="form-row" style="margin-bottom: 0.8rem;">
@@ -1786,17 +1887,24 @@
 
           <!-- Tab 4: Message Center (CRM) -->
           <div class="admin-tab-pane" id="admin-tab-crm">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.8rem;">
+            <div
+              style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.8rem;">
               <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
-                <button class="cyber-btn secondary crm-filter-btn active" data-filter="all" style="padding: 0.4rem 0.8rem; font-size: 0.75rem;">All Leads</button>
-                <button class="cyber-btn secondary crm-filter-btn" data-filter="new" style="padding: 0.4rem 0.8rem; font-size: 0.75rem;">🟡 New</button>
-                <button class="cyber-btn secondary crm-filter-btn" data-filter="discussion" style="padding: 0.4rem 0.8rem; font-size: 0.75rem;">🔵 In Discussion</button>
-                <button class="cyber-btn secondary crm-filter-btn" data-filter="quoted" style="padding: 0.4rem 0.8rem; font-size: 0.75rem;">🟣 Quoted</button>
-                <button class="cyber-btn secondary crm-filter-btn" data-filter="closed" style="padding: 0.4rem 0.8rem; font-size: 0.75rem;">🟢 Closed / Won</button>
+                <button class="cyber-btn secondary crm-filter-btn active" data-filter="all"
+                  style="padding: 0.4rem 0.8rem; font-size: 0.75rem;">All Leads</button>
+                <button class="cyber-btn secondary crm-filter-btn" data-filter="new"
+                  style="padding: 0.4rem 0.8rem; font-size: 0.75rem;">🟡 New</button>
+                <button class="cyber-btn secondary crm-filter-btn" data-filter="discussion"
+                  style="padding: 0.4rem 0.8rem; font-size: 0.75rem;">🔵 In Discussion</button>
+                <button class="cyber-btn secondary crm-filter-btn" data-filter="quoted"
+                  style="padding: 0.4rem 0.8rem; font-size: 0.75rem;">🟣 Quoted</button>
+                <button class="cyber-btn secondary crm-filter-btn" data-filter="closed"
+                  style="padding: 0.4rem 0.8rem; font-size: 0.75rem;">🟢 Closed / Won</button>
               </div>
 
               <div style="display: flex; gap: 0.6rem;">
-                <button id="crm-add-sample-btn" class="cyber-btn secondary" style="padding: 0.4rem 0.8rem; font-size: 0.75rem;">
+                <button id="crm-add-sample-btn" class="cyber-btn secondary"
+                  style="padding: 0.4rem 0.8rem; font-size: 0.75rem;">
                   <i data-lucide="plus" style="width: 12px; height: 12px;"></i>
                   <span>Add Sample Lead</span>
                 </button>
@@ -1830,10 +1938,11 @@
           <!-- Tab 5: Profile & Global Site Settings -->
           <div class="admin-tab-pane" id="admin-tab-settings">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;">
-              
+
               <!-- 1. Profile Bio & Global Text -->
               <div class="glass-card" style="padding: 1.5rem;">
-                <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem;">
+                <h4
+                  style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem;">
                   <i data-lucide="user" style="color: var(--accent-primary); width: 18px; height: 18px;"></i>
                   Profile & Global Bio Settings
                 </h4>
@@ -1846,7 +1955,8 @@
 
                   <div class="form-group" style="margin-bottom: 0.8rem;">
                     <label class="form-label" style="font-size: 0.75rem;">Hero Tagline / Subheadline</label>
-                    <input type="text" id="settings-hero-subheadline" class="form-input" placeholder="Custom T-Shirt Artist // Vector Designer // POD Specialist" />
+                    <input type="text" id="settings-hero-subheadline" class="form-input"
+                      placeholder="Custom T-Shirt Artist // Vector Designer // POD Specialist" />
                   </div>
 
                   <div class="form-group" style="margin-bottom: 0.8rem;">
@@ -1857,11 +1967,13 @@
                   <div class="form-row" style="margin-bottom: 0.8rem;">
                     <div class="form-group">
                       <label class="form-label" style="font-size: 0.75rem;">Resume Download Link</label>
-                      <input type="url" id="settings-resume-link" class="form-input" placeholder="https://www.linkedin.com/in/biplob-art/" />
+                      <input type="url" id="settings-resume-link" class="form-input"
+                        placeholder="https://www.linkedin.com/in/biplob-art/" />
                     </div>
                     <div class="form-group">
                       <label class="form-label" style="font-size: 0.75rem;">Contact Email</label>
-                      <input type="email" id="settings-contact-email" class="form-input" placeholder="md.biplob.art@gmail.com" />
+                      <input type="email" id="settings-contact-email" class="form-input"
+                        placeholder="md.biplob.art@gmail.com" />
                     </div>
                   </div>
 
@@ -1873,8 +1985,11 @@
                   <!-- Broadcast Banner -->
                   <div style="border-top: 1px solid var(--border-glass); padding-top: 1rem; margin-top: 1rem;">
                     <div style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.6rem;">
-                      <input type="checkbox" id="settings-banner-toggle" style="width: 18px; height: 18px; cursor: pointer;" checked />
-                      <label for="settings-banner-toggle" style="font-size: 0.85rem; font-weight: 600; cursor: pointer;">Enable Top Announcement Ticker</label>
+                      <input type="checkbox" id="settings-banner-toggle"
+                        style="width: 18px; height: 18px; cursor: pointer;" checked />
+                      <label for="settings-banner-toggle"
+                        style="font-size: 0.85rem; font-weight: 600; cursor: pointer;">Enable Top Announcement
+                        Ticker</label>
                     </div>
 
                     <div class="form-group" style="margin-bottom: 1rem;">
@@ -1887,7 +2002,8 @@
                   <div class="form-row" style="margin-bottom: 1.2rem;">
                     <div class="form-group">
                       <label class="form-label" style="font-size: 0.75rem;">Custom Neon Accent</label>
-                      <input type="color" id="settings-accent-color" value="#00f3ff" style="width: 100%; height: 38px; border: 1px solid var(--border-glass); border-radius: 6px; background: none; cursor: pointer;" />
+                      <input type="color" id="settings-accent-color" value="#00f3ff"
+                        style="width: 100%; height: 38px; border: 1px solid var(--border-glass); border-radius: 6px; background: none; cursor: pointer;" />
                     </div>
                     <div class="form-group">
                       <label class="form-label" style="font-size: 0.75rem;">3D Particle Density</label>
@@ -1908,12 +2024,14 @@
 
               <!-- 2. Database Backup, Restore & Reset -->
               <div class="glass-card" style="padding: 1.5rem;">
-                <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem;">
+                <h4
+                  style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem;">
                   <i data-lucide="hard-drive" style="color: #00ff88; width: 18px; height: 18px;"></i>
                   Database Backup & Restoration
                 </h4>
                 <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 1.2rem;">
-                  Full 1-click JSON backup of all portfolio projects, skills, certifications, CRM messages, and custom configurations.
+                  Full 1-click JSON backup of all portfolio projects, skills, certifications, CRM messages, and custom
+                  configurations.
                 </p>
 
                 <div style="display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 1.5rem;">
@@ -1922,7 +2040,8 @@
                     <span>Export Full System Backup (JSON)</span>
                   </button>
 
-                  <label class="cyber-btn secondary" style="justify-content: center; cursor: pointer; text-align: center;">
+                  <label class="cyber-btn secondary"
+                    style="justify-content: center; cursor: pointer; text-align: center;">
                     <i data-lucide="upload-cloud" style="width: 15px; height: 15px;"></i>
                     <span>Restore From Backup File</span>
                     <input type="file" id="admin-restore-file-input" accept=".json" style="display: none;" />
@@ -1930,11 +2049,13 @@
                 </div>
 
                 <div style="border-top: 1px solid var(--border-glass); padding-top: 1.2rem;">
-                  <h5 style="font-size: 0.9rem; font-weight: 700; color: #ff007f; margin-bottom: 0.5rem;">Factory Reset</h5>
+                  <h5 style="font-size: 0.9rem; font-weight: 700; color: #ff007f; margin-bottom: 0.5rem;">Factory Reset
+                  </h5>
                   <p style="color: var(--text-muted); font-size: 0.78rem; margin-bottom: 0.8rem;">
                     Revert all custom case studies, skills, CRM logs, and settings back to factory defaults.
                   </p>
-                  <button id="admin-reset-defaults-btn" class="cyber-btn secondary" style="border-color: #ff007f; color: #ff007f; width: 100%; justify-content: center;">
+                  <button id="admin-reset-defaults-btn" class="cyber-btn secondary"
+                    style="border-color: #ff007f; color: #ff007f; width: 100%; justify-content: center;">
                     <i data-lucide="refresh-cw" style="width: 14px; height: 14px;"></i>
                     <span>Reset All to Factory Defaults</span>
                   </button>
